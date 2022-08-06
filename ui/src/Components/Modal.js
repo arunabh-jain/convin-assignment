@@ -1,1 +1,0 @@
-import "./Stylesheets/Modal.css";

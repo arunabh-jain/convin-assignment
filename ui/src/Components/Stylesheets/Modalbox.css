@@ -1,0 +1,45 @@
+.job-p, .env-p{
+    display: inline-block;
+    line-height: 0;
+    margin: 0 !important;
+}
+
+.job-body, .env-body{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.job-body{
+    margin-bottom: 20px;
+}
+.ant-select {
+    display: inline-block;
+    width: 60% !important;
+}
+
+.ant-modal{
+    text-align: center;
+}
+
+.add-btn{
+    width: 30%;
+    height: 100%;
+}
+
+.ant-modal-footer{
+    display: flex;
+    justify-content: right;
+}
+
+.open-btn, .add-btn{
+    background-color: black !important;
+    border-radius: 15px;
+    border-color:black !important;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.5);
+}
+
+.open-btn:hover, .add-btn:hover{
+    background-color: rgb(66, 68, 73) !important;
+}

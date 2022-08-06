@@ -1,0 +1,26 @@
+.searchbar {
+    width: 300px;
+    display: inline-block;
+}
+
+.ant-input-search-button{
+    background-color: black !important;
+    border-color:black !important;
+    border-radius:0 15px 15px 0 !important;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.5);
+}
+
+.ant-input-affix-wrapper{
+    border-radius: 15px 0 0 15px !important;
+    border-color: transparent !important;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.5);
+}
+
+.ant-input-group-addon{
+    border-radius: 0 15px 15px 0 !important;
+    border-color: black !important;
+}
+
+.ant-input-search-button:hover{
+    background-color: rgb(66, 68, 73) !important;
+}

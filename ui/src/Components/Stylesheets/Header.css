@@ -1,0 +1,25 @@
+.head{
+    display: flex;
+    justify-content: right;
+    gap: 1vw;
+    align-items: center;
+    height: 65px;
+    padding: 0 1vw;
+    background-color: #82b74b;
+    border-radius:20px !important;
+    margin: 1%;
+    width: 98%;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.5);
+}
+
+h1{
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 40px;
+    display:inline-block;
+    line-height: 0;
+    margin-top: 2%;
+    color: white;
+    text-align: left;
+    width: 70%;
+    text-shadow: 5px 5px 10px rgba(0,0,0,0.5);
+}
