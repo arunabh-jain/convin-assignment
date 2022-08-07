@@ -28,6 +28,7 @@ const Modalbox = () => {
       visible={isModalVisible}
       onOk={handleOk}
       onCancel={handleCancel}
+      
       footer={[
           
           <Button className="add-btn" key="submit" type="primary"  onClick={handleOk}>
@@ -38,7 +39,7 @@ const Modalbox = () => {
         >
         <div className="job-body">
         <p className="job-p">Select Job</p>
-        <DropdownMenu />
+        <DropdownMenu/>
         </div>
         <div className="env-body">
         <p className="job-p">Select Environment</p>
