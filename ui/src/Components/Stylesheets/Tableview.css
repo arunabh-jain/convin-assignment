@@ -41,3 +41,7 @@
 .ant-pagination-item-link, .ant-pagination-item{
     border-radius: 100% !important;
 }
+
+.ant-table{
+    min-height: 500px;
+}

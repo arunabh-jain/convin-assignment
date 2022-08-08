@@ -78,7 +78,11 @@ const data = [
 const Tableview = () => (
   <div className="outer">
     <div className="inner">
-      <Table columns={columns} dataSource={data}/>
+      <Table
+      columns={columns}
+      dataSource={data}
+      pagination={{ pageSize: 10 }}
+      />
    </div>
   </div>
 );
