@@ -38,11 +38,11 @@ const Modalbox = () => {
         ]}
         >
         <div className="job-body">
-        <p className="job-p">Select Job</p>
+        <p className="job-p">SELECT JOB</p>
         <DropdownMenu/>
         </div>
         <div className="env-body">
-        <p className="job-p">Select Environment</p>
+        <p className="job-p">SELECT ENVIRONMENT</p>
         <DropdownMenu/>
         </div>
       </Modal>

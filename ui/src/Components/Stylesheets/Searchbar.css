@@ -4,8 +4,8 @@
 }
 
 .ant-input-search-button{
-    background-color: black !important;
-    border-color:black !important;
+    background-image: linear-gradient(360deg, #000000, #444444) !important;
+    border:none !important;
     border-radius:0 15px 15px 0 !important;
     box-shadow: 5px 5px 10px rgba(0,0,0,0.5);
 }
@@ -18,9 +18,10 @@
 
 .ant-input-group-addon{
     border-radius: 0 15px 15px 0 !important;
-    border-color: black !important;
+    background-image: linear-gradient(360deg, #000000, #444444) !important;
+    
 }
 
 .ant-input-search-button:hover{
-    background-color: rgb(66, 68, 73) !important;
+    background-image: linear-gradient(360deg, #333333, #666666) !important;
 }

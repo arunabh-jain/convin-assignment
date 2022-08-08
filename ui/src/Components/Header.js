@@ -3,9 +3,13 @@ import Modalbox from '../Components/Modalbox';
 import Searchbar from "../Components/Searchbar";
 const Header = () => (
     <div className="head">
-            <h1>SRE INSIGHTS ADMIN</h1>
-            <Searchbar/>
-            <Modalbox/>
+        <div className="image">
+            <img src="https://www.decurtis.com/wp-content/uploads/2019/11/logo-decurtis-corporation.png" alt="logo" className="logo"/>
         </div>
+        <h1>SRE INSIGHTS ADMIN</h1>
+        <Searchbar/>
+        <Modalbox/>
+    </div>
 );
 export default Header;
+

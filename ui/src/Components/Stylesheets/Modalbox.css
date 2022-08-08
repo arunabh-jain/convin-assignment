@@ -2,6 +2,10 @@
     display: inline-block;
     line-height: 0;
     margin: 0 !important;
+    color: white    !important;
+    text-shadow: 5px 5px 10px rgba(0,0,0,0.5) !important;
+    font-size: 15px;
+    font-weight: 700;
 }
 
 .job-body, .env-body{
@@ -27,47 +31,71 @@
 .add-btn{
     width: 30%;
     height: 100%;
+    background-image: linear-gradient(360deg, #04598e, #0474CC) !important;
+    border-radius: 15px;
+    border:none;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.5);
+    font-weight: 600;
+}
+
+.add-btn:hover{
+    background-image: linear-gradient(360deg, #0470b3, #048ff9) !important;
+    
 }
 
 .ant-modal-footer{
     display: flex;
     justify-content: right;
     border-radius: 0 0 20px 20px !important;
+    border: none;
+    padding-bottom: 15px;
+    padding-right: 23px;
     
 }
 
 
-.open-btn, .add-btn{
-    background-color: black !important;
+.open-btn{
+    background-image: linear-gradient(360deg, #000000, #444444) !important;
     border-radius: 15px;
-    border-color:black !important;
+    border:none;
     box-shadow: 5px 5px 10px rgba(0,0,0,0.5);
+    font-weight: 600;
 }
 
-.open-btn:hover, .add-btn:hover{
-    background-color: rgb(66, 68, 73) !important;
+.open-btn:hover{
+    background-image: linear-gradient(360deg, #333333, #666666) !important;
 }
 
 .ant-modal-content{
     border-radius: 20px !important;
+    background-color:rgb(50, 50, 50);
     
+}
+
+.ant-modal-body{
+    border: none;
+    padding-bottom: 10px;
 }
 
 .ant-modal-header{
     
-    background-image: linear-gradient(360deg, #82b74b, #90ef01);
+    background-image: linear-gradient(360deg, #82b74b, #c5ff05);
     border-radius: 20px 20px 0 0 !important;
-    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
     border:none;
 }
 
 .ant-modal-title{
-    color: white !important;
-    text-shadow: 5px 5px 10px rgba(0,0,0,0.5);
+    color: black !important;
+    text-shadow: 1px 1px 50px black;
     font-size: 20px;
-    font-weight: bold;
+    font-weight: 800;
 }
 
 .ant-modal-close-x:hover svg{
     fill:white;
+}
+
+.ant-modal-close-x:hover{
+    background-image: linear-gradient(360deg, rgb(142, 0, 0), red) !important;
+    border-radius: 0 20px 0 0 !important;
 }
