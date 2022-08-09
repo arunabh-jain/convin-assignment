@@ -2,6 +2,7 @@ import "./Stylesheets/Bucket.css";
 import { Button } from 'antd';
 import Searchbar from "../Components/Searchbar";
 import VideoCard from "../Components/VideoCard";
+import Modalbox from '../Components/Modalbox';
 
 const Bucket = () => (
   <div className="bucket-outer">
@@ -14,9 +15,9 @@ const Bucket = () => (
       <VideoCard/>
       </div>
     <div className="bucket-footer">  
-      <Button size="middle" className="bucket-btn" type="primary" onClick={console.log("Add Modal")}>ADD</Button>
+      <Modalbox />
       <Button size="middle" className="bucket-btn" type="primary" onClick={console.log("Deleted")}>DELETE</Button>
-      </div>
+    </div>
   </div>
 );
 

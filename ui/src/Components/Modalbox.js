@@ -21,10 +21,10 @@ const Modalbox = () => {
   return (
     <>
       <Button size="middle" className="open-btn" type="primary" onClick={showModal}>
-        MODAL DEMO
+        ADD
       </Button>
       <Modal
-      title="ADD/MODIFY"
+      title="ADD VIDEO"
       visible={isModalVisible}
       onOk={handleOk}
       onCancel={handleCancel}
