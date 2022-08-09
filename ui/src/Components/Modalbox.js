@@ -3,7 +3,7 @@ import { Button, Modal } from 'antd';
 import React, { useState } from 'react';
 import DropdownMenu from './Dropdown';
 
-const Modalbox = () => {
+const Modalbox = (props) => {
   const [isModalVisible, setIsModalVisible] = useState(false);
 
   const showModal = () => {
@@ -11,6 +11,7 @@ const Modalbox = () => {
   };
 
   const handleOk = () => {
+    props.onStoreData(1,1);
     setIsModalVisible(false);
   };
 

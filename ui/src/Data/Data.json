@@ -1,0 +1,23 @@
+[
+    {
+        "bucket_id":"",
+        "bucket_title":"",
+        "videos":[
+            {
+                "video_id":"",
+                "video_name":"",
+                "video_link":""
+            },
+            {
+                "video_id":"",
+                "video_name":"",
+                "video_link":""
+            },
+            {
+                "video_id":"",
+                "video_name":"",
+                "video_link":""
+            }
+        ]
+    }
+]

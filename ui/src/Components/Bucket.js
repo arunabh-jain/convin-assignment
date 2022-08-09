@@ -4,7 +4,7 @@ import Searchbar from "../Components/Searchbar";
 import VideoCard from "../Components/VideoCard";
 import Modalbox from '../Components/Modalbox';
 
-const Bucket = () => (
+const Bucket = (props) => (
   <div className="bucket-outer">
     <div className="bucket-header">
       <p>BUCKET TITLE</p>
@@ -15,7 +15,7 @@ const Bucket = () => (
       <VideoCard/>
       </div>
     <div className="bucket-footer">  
-      <Modalbox />
+      <Modalbox onStoreData={props.onStoreData}/>
       <Button size="middle" className="bucket-btn" type="primary" onClick={console.log("Deleted")}>DELETE</Button>
     </div>
   </div>
