@@ -1,5 +1,5 @@
 import "./Stylesheets/Modalbox.css";
-import { Button, Modal } from 'antd';
+import { Button, Modal, Input } from 'antd';
 import React, { useState } from 'react';
 import DropdownMenu from './Dropdown';
 
@@ -25,7 +25,7 @@ const Modalbox = (props) => {
         ADD
       </Button>
       <Modal
-      title="ADD VIDEO"
+      title="ADD/MODIFY"
       visible={isModalVisible}
       onOk={handleOk}
       onCancel={handleCancel}
@@ -38,13 +38,17 @@ const Modalbox = (props) => {
           
         ]}
         >
-        <div className="job-body">
-        <p className="job-p">SELECT A</p>
+        <div className="dropdown-body">
+        <p className="dropdown-p">VIDEO BUCKET</p>
         <DropdownMenu/>
         </div>
-        <div className="env-body">
-        <p className="job-p">SELECT B</p>
-        <DropdownMenu/>
+        <div className="select-name">
+        <p className="select-p">VIDEO NAME</p>
+        <Input className="text-box" placeholder="Enter Name"/>
+        </div>
+        <div className="select-link">
+        <p className="select-p">VIDEO URL</p>
+        <Input className="text-box" placeholder="Enter Link"/>
         </div>
       </Modal>
     </>
