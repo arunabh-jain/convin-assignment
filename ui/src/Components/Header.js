@@ -1,14 +1,12 @@
 import "./Stylesheets/Header.css";
 import Modalbox from '../Components/Modalbox';
-import Searchbar from "../Components/Searchbar";
 const Header = () => (
     <div className="header">
         <div className="head">
             <div className="image">
-                <img src="https://www.decurtis.com/wp-content/uploads/2019/11/logo-decurtis-corporation.png" alt="logo" className="logo"/>
+                <img src="https://uploads-ssl.webflow.com/606c4d4ed5ba7ca3bc774c4c/606c5fcd82475240c607a79f_LOGO.svg" alt="logo" className="logo"/>
             </div>
-            <h1>SRE INSIGHTS ADMIN</h1>
-            <Searchbar/>
+            <h1>VIDEO BUCKET LIST</h1>
             <Modalbox/>
         </div>
     </div>

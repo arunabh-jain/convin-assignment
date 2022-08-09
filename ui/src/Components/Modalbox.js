@@ -21,10 +21,10 @@ const Modalbox = () => {
   return (
     <>
       <Button size="middle" className="open-btn" type="primary" onClick={showModal}>
-        ADD TASK
+        MODAL DEMO
       </Button>
       <Modal
-      title="SELECT TASK"
+      title="ADD/MODIFY"
       visible={isModalVisible}
       onOk={handleOk}
       onCancel={handleCancel}
@@ -32,17 +32,17 @@ const Modalbox = () => {
       footer={[
           
           <Button className="add-btn" key="submit" type="primary"  onClick={handleOk}>
-            ADD
+            OK
           </Button>
           
         ]}
         >
         <div className="job-body">
-        <p className="job-p">SELECT JOB</p>
+        <p className="job-p">SELECT A</p>
         <DropdownMenu/>
         </div>
         <div className="env-body">
-        <p className="job-p">SELECT ENVIRONMENT</p>
+        <p className="job-p">SELECT B</p>
         <DropdownMenu/>
         </div>
       </Modal>

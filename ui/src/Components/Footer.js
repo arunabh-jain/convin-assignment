@@ -2,7 +2,7 @@ import "./Stylesheets/Footer.css";
 const Footer = () => (
     <div className="footer">
         <div className="foot">
-            <p>©Copyright 2022 SRE INSIGHTS ADMIN. All rights reserved by DeCurtis International Pvt. Ltd.</p>
+            <p>© 2022 VIDEO BUCKET LIST. All rights reserved by <span ><a className="link" href="https://convin.ai">convin.ai</a></span></p>
             <p>Developed by <span ><a className="link" href="https://www.instagram.com/arunabh_jain/">Arunabh Jain</a></span></p>
         </div>
     </div>

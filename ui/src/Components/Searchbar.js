@@ -12,7 +12,7 @@ const Searchbar = () => (
       placeholder="Search Task"
       allowClear
       enterButton
-      size="middle"  
+      size="small"  
       onSearch={onSearch}
     />
 
