@@ -3,6 +3,7 @@
     min-height: calc(100vh - 120px);
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: left;
+    gap : 30px;
     padding: 20px;
 }

@@ -1,0 +1,53 @@
+{
+  "buckets": [
+    {
+      "id": "1",
+      "bucket_title": "Bucket 1",
+      "videos": [
+        {
+          "video_id": 0,
+          "video_name": "new",
+          "video_link": "new"
+        },
+        {
+          "video_id": 1,
+          "video_name": "new",
+          "video_link": "new"
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "bucket_title": "Bucket 2",
+      "videos": []
+    },
+    {
+      "id": "3",
+      "bucket_title": "Bucket 3",
+      "videos": []
+    },
+    {
+      "id": "D",
+      "bucket_title": "Bucket2",
+      "videos": []
+    }
+  ],
+  "history": [
+    {
+      "id": 1,
+      "bucket_id": "A",
+      "bucket_title": "Bucket1",
+      "video_id": "A1",
+      "video_name": "qwert",
+      "last_played": "25/04/2022"
+    },
+    {
+      "id": 2,
+      "bucket_id": "A",
+      "bucket_title": "Bucket1",
+      "video_id": "A1",
+      "video_name": "qwert",
+      "last_played": "25/04/2022"
+    }
+  ]
+}

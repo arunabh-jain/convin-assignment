@@ -1,25 +1,34 @@
-import { Fragment } from "react";
+import React,{ Fragment,useEffect,useState } from "react";
 import "./Stylesheets/Homepage.css";
 import Header from "../Components/Header";
 import Bucket from "../Components/Bucket";
 import Footer from "../Components/Footer";
-import Data from "../Data/Data.json";
 
-const storeData = (a,b) =>{
-    console.log(a);
-    console.log(b);
+const Homepage = () => {
+    const [data, setData] = useState([]);
+    useEffect(() => {
+      const fetchData = async () => {
+        const response = await fetch("http://localhost:8000/buckets",{method: "GET"});
+        const data = await response.json();
+        setData(data);
+        //console.log(data)
+      }
+      fetchData();
+    }, [])
+    
+    return (
+        <Fragment>
+        <Header/>
+        <div className="body">
+            {
+                data.map((data)=>{
+                    return(<Bucket key={data.id} id={data.id} title={data.bucket_title} videos={data.videos}/>)
+                })
+            }
+        </div>
+        <Footer/>
+        </Fragment>
+    )
 }
 
-const Homepage = () => (
-    <Fragment>
-    <Header/>
-    <div className="body">
-        <Bucket onStoreData={storeData}/>
-        <Bucket/>
-        <Bucket/>
-        <Bucket/>
-    </div>
-    <Footer/>
-    </Fragment>
-);
 export default Homepage;
