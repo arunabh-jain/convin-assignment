@@ -19,12 +19,24 @@
     {
       "id": "2",
       "bucket_title": "Bucket 2",
-      "videos": []
+      "videos": [
+        {
+          "video_id": 0,
+          "video_name": "ds",
+          "video_link": "sdfsf"
+        }
+      ]
     },
     {
       "id": "3",
       "bucket_title": "Bucket 3",
-      "videos": []
+      "videos": [
+        {
+          "video_id": 0,
+          "video_name": "HELLO",
+          "video_link": "HTTPS://"
+        }
+      ]
     },
     {
       "id": "D",

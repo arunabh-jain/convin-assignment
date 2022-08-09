@@ -20,7 +20,7 @@ const Bucket = (props) => (
       }
       </div>
     <div className="bucket-footer">  
-      <Modalbox id={props.id}/>
+      <Modalbox id={props.id} btnName="ADD"/>
       <Button size="middle" className="bucket-btn" type="primary" onClick={console.log("Deleted")}>DELETE</Button>
     </div>
   </div>

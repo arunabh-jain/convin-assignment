@@ -11,7 +11,7 @@ const Homepage = () => {
         const response = await fetch("http://localhost:8000/buckets",{method: "GET"});
         const data = await response.json();
         setData(data);
-        //console.log(data)
+        console.log(data)
       }
       fetchData();
     }, [])
