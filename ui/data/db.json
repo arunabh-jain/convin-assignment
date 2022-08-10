@@ -22,5 +22,33 @@
       "videos": []
     }
   ],
-  "history": []
+  "history": [
+    {
+      "bucket_id": "1",
+      "bucket_title": "Bucket 1",
+      "video_id": 0,
+      "video_name": "Akshat",
+      "video_link": "Akshat",
+      "last_played": "2022-08-10T18:24:24.492Z",
+      "id": 1
+    },
+    {
+      "bucket_id": "1",
+      "bucket_title": "Bucket 1",
+      "video_id": 0,
+      "video_name": "Akshat",
+      "video_link": "Akshat",
+      "last_played": "2022-08-10T18:24:25.700Z",
+      "id": 2
+    },
+    {
+      "bucket_id": "1",
+      "bucket_title": "Bucket 1",
+      "video_id": 1,
+      "video_name": "asnc",
+      "video_link": "k n",
+      "last_played": "2022-08-10T18:24:26.829Z",
+      "id": 3
+    }
+  ]
 }

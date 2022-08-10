@@ -9,11 +9,11 @@
 }
 
 .ant-tabs-nav-wrap{
-    color:white;
+    color:white !important;
     display: flex;
     justify-content: right;
     height: 60px;
-    padding:0 75px 0 0;
+    padding:0 50px 0 0;
     background-image: linear-gradient(360deg, #04598e, #0474CC);
     border-radius:30px !important;
     margin: auto;
@@ -27,7 +27,6 @@
     gap: 2%;
     align-items: flex-end !important;
     align-content: center;
-    border:none;
     width: 98%;
     padding: 15px 0 0 0 !important;
     margin: 0 1% !important;
@@ -38,47 +37,77 @@
     content: none;
 }
 
-.head h1{
-    font-family: 'Josefin Sans', sans-serif;
-    font-size: 2.5vw;
-    display:inline-block;
-    line-height: 0;
-    margin-top:2vw;
-    color: white;
-    text-align: left;
-    text-shadow: 5px 5px 10px rgba(0,0,0,0.5);
-}
-
 .image{
     display: flex;
     justify-content: center;
     align-items: center;
     align-self: left;
-    width: 125px;
+    width: 125px !important;
     height: 60px;
     background-image: linear-gradient(180deg, #fb1ac6, #ff007b);
     border-radius: 30px;
     box-shadow: 10px 2px 15px rgba(0,0,0,0.5);
-    margin: 0;
+    margin-right: 15px;
     padding: 0;
 }
 
 .logo{
     width: 100px;
 }
-
 .header{
-    padding-top:15px !important;
-    margin: 0 !important;
+    position: absolute;
+    top: 15px;
+    left: 1%;
+    min-width: max-content;
 }
 
 .head{
     display: flex;
-    justify-content: center;
+    justify-content: left;
     align-items: center !important;
     align-content: center;
-    gap: 10px;
     height: 60px;
-    padding:0 1.2% 0 0;
-    max-width: max-content;
+    border-radius:30px !important;
+    margin: 0;
+}
+
+
+.head p{
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 2.5vw;
+    display:inline-block;
+    line-height: 0;
+    margin-top:3.2vw;
+    min-width: max-content;
+    color: white;
+    text-align: left;
+    text-shadow: 5px 5px 10px rgba(0,0,0,0.5);
+}
+
+.ant-tabs-tab{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    height: 60px;
+    margin: 0;
+    padding: 0;
+    width: 150px;
+}
+
+.ant-tabs-tab-btn:hover{
+    color: white;
+
+}
+
+.ant-tabs-tab:hover{
+    color: white;
+    background-image: linear-gradient(360deg, #000000, #444444) !important;
+
+}
+
+.ant-tabs-tab-active, .ant-tabs-tab-btn-active{
+    color: white !important;
+    background-image: linear-gradient(360deg, #000000, #444444) !important;
+    margin: 0;
 }
