@@ -4,6 +4,7 @@ import { Button } from 'antd';
 import Searchbar from "../Components/Searchbar";
 import VideoCard from "../Components/VideoCard";
 import Modalbox from '../Components/Modalbox';
+import Popup from '../Components/Popup';
 
 const Bucket = (props) => {
   const[elementsToDelete, setElementsToDelete] = useState([])
@@ -57,6 +58,7 @@ const Bucket = (props) => {
   <div className="bucket-outer">
     <div className="bucket-header">
       <p>{props.title}</p>
+      <Popup/>
       <Searchbar/>
    </div>
     <div className="bucket-body">
