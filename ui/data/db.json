@@ -12,9 +12,26 @@
       ]
     },
     {
+<<<<<<< HEAD
+      "id": "3",
+      "bucket_title": "Bucket 3",
+      "videos": [
+        {
+          "video_id": 0,
+          "video_name": "Akshat",
+          "video_link": "Akshat"
+        },
+        {
+          "video_id": 1,
+          "video_name": "Akshat",
+          "video_link": "Akshat"
+        }
+      ]
+=======
       "id": "2",
       "bucket_title": "Bucket 2",
       "videos": []
+>>>>>>> 772c2f46bec2f9374a4281c2d6cbe1c8405ae12f
     }
   ],
   "history": []
