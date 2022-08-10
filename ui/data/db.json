@@ -8,6 +8,11 @@
           "video_id": 0,
           "video_name": "Akshat",
           "video_link": "123466"
+        },
+        {
+          "video_id": 1,
+          "video_name": "fddff",
+          "video_link": "gfdgfd"
         }
       ]
     },
@@ -25,25 +30,31 @@
     {
       "id": "3",
       "bucket_title": "Bucket 3",
-      "videos": []
+      "videos": [
+        {
+          "video_id": 0,
+          "video_name": "sgsgs",
+          "video_link": "vvc"
+        }
+      ]
     }
   ],
   "history": [
     {
-      "id": 1,
-      "bucket_id": "A",
-      "bucket_title": "Bucket1",
-      "video_id": "A1",
-      "video_name": "qwert",
-      "last_played": "25/04/2022"
+      "bucket_id": "1",
+      "bucket_title": "Bucket 1",
+      "video_name": "Akshat",
+      "video_link": "123466",
+      "last_played": "2022-08-10T09:35:04.053Z",
+      "id": 1
     },
     {
-      "id": 2,
-      "bucket_id": "A",
-      "bucket_title": "Bucket1",
-      "video_id": "A1",
-      "video_name": "qwert",
-      "last_played": "25/04/2022"
+      "bucket_id": "3",
+      "bucket_title": "Bucket 3",
+      "video_name": "sgsgs",
+      "video_link": "vvc",
+      "last_played": "2022-08-10T09:35:12.254Z",
+      "id": 2
     }
   ]
 }
