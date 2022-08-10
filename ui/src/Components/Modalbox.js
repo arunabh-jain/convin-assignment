@@ -14,13 +14,13 @@ const Modalbox = (props) => {
 
   useEffect(() => {
     const fetchData = async () =>{
-      const response = await fetch("http://localhost:8000/buckets",{method: "GET"});
-      const data = await response.json();
-      setBucketNameData(data);
-    }
-    if(props.btnName==="EDIT"){
-      fetchData();
-    }
+        const response = await fetch("http://localhost:8000/buckets",{method: "GET"});
+        const data = await response.json();
+        setBucketNameData(data);
+      }
+      if(props.btnName==="EDIT"){
+        fetchData();
+      }
   }, [isModalVisible])
   
 

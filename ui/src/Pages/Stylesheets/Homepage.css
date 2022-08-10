@@ -1,9 +1,0 @@
-.body{
-    width: 100%;
-    min-height: calc(100vh - 120px);
-    display: flex;
-    align-items: center;
-    justify-content: left;
-    gap : 50px;
-    padding: 20px;
-}

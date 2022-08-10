@@ -1,7 +1,11 @@
 import "./Stylesheets/VideoCard.css";
-import { Button } from 'antd';
+import { Button, Checkbox } from 'antd';
 import Modalbox from '../Components/Modalbox';
+import React from 'react';
 
+const onChange = (e) => {
+    console.log(`checked = ${e.target.checked}`);
+  };
 const VideoCard = (props) => {
 
     const saveHistory = async() =>{
@@ -25,6 +29,9 @@ const VideoCard = (props) => {
 
     return(
         <div className="card">
+            <div className="checkbox-div">
+            <Checkbox className="check-box" onChange={onChange}/>
+            </div>
             <p className="video-name">{props.name}</p>
             <Button size="middle" className="play-btn" type="primary" onClick={saveHistory}>VIEW</Button>
             <Modalbox btnName="EDIT" setData={props.setData} videoId={props.id} bucketName={props.bucketName} bucketID={props.bucketID} videoName={props.name} videoLink={props.link}/>
