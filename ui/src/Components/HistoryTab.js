@@ -1,91 +1,74 @@
 import "./Stylesheets/HistoryTab.css";
-import { Space, Table, Tag } from 'antd';
+import { Button,Table} from 'antd';
 import React from 'react';
-const columns = [
-  {
-    title: 'Name',
-    dataIndex: 'name',
-    key: 'name',
-    render: (text) => <a>{text}</a>,
-  },
-  {
-    title: 'Age',
-    dataIndex: 'age',
-    key: 'age',
-  },
-  {
-    title: 'Address',
-    dataIndex: 'address',
-    key: 'address',
-  },
-  {
-    title: 'Tags',
-    key: 'tags',
-    dataIndex: 'tags',
-    render: (_, { tags }) => (
-      <>
-        {tags.map((tag) => {
-          let color = tag.length > 5 ? 'geekblue' : 'green';
+import { useState, useEffect } from 'react';
 
-          if (tag === 'loser') {
-            color = 'volcano';
-          }
+const Tableview = (props) => {
+  const[history,setHistory] = useState([])
 
-          return (
-            <Tag color={color} key={tag}>
-              {tag.toUpperCase()}
-            </Tag>
-          );
-        })}
-      </>
-    ),
-  },
-  {
-    title: 'Action',
-    key: 'action',
-    render: (_, record) => (
-      <Space size="middle">
-        <a>Invite {record.name}</a>
-        <a>Delete</a>
-      </Space>
-    ),
-  },
-];
-const data = [
-  {
-    key: '1',
-    name: 'John Brown',
-    age: 32,
-    address: 'New York No. 1 Lake Park',
-    tags: ['nice', 'developer'],
-  },
-  {
-    key: '2',
-    name: 'Jim Green',
-    age: 42,
-    address: 'London No. 1 Lake Park',
-    tags: ['loser'],
-  },
-  {
-    key: '3',
-    name: 'Joe Black',
-    age: 32,
-    address: 'Sidney No. 1 Lake Park',
-    tags: ['cool', 'teacher'],
-  },
-];
+  useEffect(() => {
+    const fetchHistory = async () => {
+      const response = await fetch("http://localhost:8000/history",{method: "GET"});
+      const data = await response.json();
+      setHistory(data);
+    }
+    fetchHistory()
+  }, [props.active])
+  
+  const deleteHistory = async (id) => {
+    await fetch(`http://localhost:8000/history/${id}`, {
+      method: 'DELETE', mode: 'cors',credentials: 'same-origin',
+      headers: {
+          'Content-Type': 'application/json'
+      },
+      referrerPolicy: 'no-referrer',
+    });
+    let response = await fetch("http://localhost:8000/history",{method: "GET"});
+    response = await response.json();
+    setHistory(response);
+  }
 
-const Tableview = () => (
-  <div className="outer">
-    <div className="inner">
-      <Table
-      columns={columns}
-      dataSource={data}
-      pagination={{ pageSize: 10 }}
-      />
-   </div>
-  </div>
-);
+  const columns = [
+    {
+      title: 'Video Name',
+      dataIndex: 'video_name',
+      key: 'video_name',
+    },
+    {
+      title: 'Bucket Name',
+      dataIndex: 'bucket_title',
+      key: 'bucket_title',
+    },
+    {
+      title: 'Video Link',
+      dataIndex: 'video_link',
+      key: 'video_link',
+    },
+    {
+      title: 'Last Played',
+      dataIndex: 'last_played',
+      key: 'last_played',
+    },
+    {
+      title: '',
+      dataIndex: 'id',
+      key: 'id',
+      render : (_, record) => <Button type="link" onClick={()=>{deleteHistory(record.id)}}>Delete</Button>
+    },
+  ];
+
+  return(
+    <div className="outer">
+      <div className="inner">
+        <Table
+        columns={columns}
+        dataSource={history}
+        pagination={{ pageSize: 10 }}
+        />
+    </div>
+    </div>
+  )
+}
 
 
 export default Tableview;

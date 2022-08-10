@@ -9,6 +9,7 @@ import Popup from '../Components/Popup';
 const Bucket = (props) => {
   const[elementsToDelete, setElementsToDelete] = useState([])
   const [videoData,setVideoData] = useState([]);
+  const [displayVideoData,setDisplayVideoData] = useState([]);
 
   function GetSortOrder() {    
     return function(a, b) {   
@@ -21,9 +22,23 @@ const Bucket = (props) => {
     }    
   }   
   useEffect(() => {setVideoData(props.videos.sort(GetSortOrder()));}, [props.videos]);
-  
+  useEffect(() => {setDisplayVideoData(videoData);}, [videoData]);
+
   const addElementsToDelete = (videoID) => {
     setElementsToDelete(oldArray => [...oldArray, videoID])
+  }
+
+  const onSearchClear = (value) => {
+    setDisplayVideoData(videoData);
+  }
+
+  const setSearch = (value) => {
+    if(value==='')
+      setDisplayVideoData(videoData);
+    else
+      setDisplayVideoData( displayVideoData.filter((record)=>{
+        return record.video_name.includes(value)
+      }))
   }
 
   const deleteElementsToDelete = () => {
@@ -59,11 +74,11 @@ const Bucket = (props) => {
     <div className="bucket-header">
       <p>{props.title}</p>
       <Popup/>
-      <Searchbar/>
+      <Searchbar setSearch={setSearch} onSearchClear={onSearchClear}/>
    </div>
     <div className="bucket-body">
       {     
-        videoData.map((data)=>{
+        displayVideoData.map((data)=>{
           return(<VideoCard key={data.video_id} setData={props.setData} id={data.video_id} name={data.video_name} 
                             link={data.video_link} bucketID={props.id} bucketName={props.title}
                             addElementsToDelete={addElementsToDelete} removeElementsToDelete={removeElementsToDelete}

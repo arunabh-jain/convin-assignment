@@ -6,16 +6,14 @@ import React,{ Fragment, useEffect,useState } from "react";
 import { Tabs } from 'antd';
 const { TabPane } = Tabs;
 
-const onChange = (key) => {
-  console.log(key);
-};
-
 const TabSwitch = () => {
     const [data, setData] = useState([]);
+    const [active, setActiveTab] = useState(false)
+
     useEffect(() => {
       const fetchData = async () => {
-        const response = await fetch("http://localhost:8000/buckets",{method: "GET"});
-        const data = await response.json();
+        let response = await fetch("http://localhost:8000/buckets",{method: "GET"});
+        let data = await response.json();
         setData(data);
       }
       fetchData();
@@ -23,7 +21,7 @@ const TabSwitch = () => {
 
     return(
     <Fragment>
-    <Tabs title="VIDEO BUCKET LIST" defaultActiveKey="1" onChange={onChange}>
+    <Tabs title="VIDEO BUCKET LIST" defaultActiveKey="1" onChange={()=>setActiveTab(!active)}>
     <TabPane tab="Home" key="1">
         <div className="tab-body">
             {
@@ -34,7 +32,7 @@ const TabSwitch = () => {
         </div>
     </TabPane>
     <TabPane tab="History" key="2">
-            <HistoryTab/>
+            <HistoryTab active={active}/>
     </TabPane>
 </Tabs>
 <div className="header">

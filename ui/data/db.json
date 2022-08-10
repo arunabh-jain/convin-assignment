@@ -7,16 +7,22 @@
         {
           "video_id": 0,
           "video_name": "Akshat",
-          "video_link": "Akshat"
+          "video_link": "Gadodia"
         },
         {
           "video_id": 1,
-          "video_name": "asnc",
-          "video_link": "k n"
+          "video_name": "Akshat",
+          "video_link": "Gadodia"
+        },
+        {
+          "video_id": 2,
+          "video_name": "adasda",
+          "video_link": "dasda"
         }
       ]
     },
     {
+<<<<<<< HEAD
       "id": "3",
       "bucket_title": "Bucket 3",
       "videos": [
@@ -31,35 +37,12 @@
           "video_link": "Akshat"
         }
       ]
+=======
+      "id": "2",
+      "bucket_title": "Bucket 2",
+      "videos": []
+>>>>>>> 772c2f46bec2f9374a4281c2d6cbe1c8405ae12f
     }
   ],
-  "history": [
-    {
-      "bucket_id": "1",
-      "bucket_title": "Bucket 1",
-      "video_id": 0,
-      "video_name": "Akshat",
-      "video_link": "Akshat",
-      "last_played": "2022-08-10T18:24:24.492Z",
-      "id": 1
-    },
-    {
-      "bucket_id": "1",
-      "bucket_title": "Bucket 1",
-      "video_id": 0,
-      "video_name": "Akshat",
-      "video_link": "Akshat",
-      "last_played": "2022-08-10T18:24:25.700Z",
-      "id": 2
-    },
-    {
-      "bucket_id": "1",
-      "bucket_title": "Bucket 1",
-      "video_id": 1,
-      "video_name": "asnc",
-      "video_link": "k n",
-      "last_played": "2022-08-10T18:24:26.829Z",
-      "id": 3
-    }
-  ]
+  "history": []
 }

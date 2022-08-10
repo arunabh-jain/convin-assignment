@@ -4,7 +4,6 @@ import React, { useState} from 'react';
 import DropdownMenu from './Dropdown';
 import { useEffect } from 'react';
 
-
 const Modalbox = (props) => {
   const [isModalVisible, setIsModalVisible] = useState(false);
   const [videoName, setVideoName] = useState('');
@@ -111,8 +110,8 @@ const Modalbox = (props) => {
       let id = props.videoId;
       const newData = {
         "video_id": id,
-        "video_name":videoName,//props.videoName,
-        "video_link":videoLink//props.videoLink
+        "video_name":videoName,
+        "video_link":videoLink
       }
       let videos = data.videos.filter((video)=>{
         return video.video_id!==id
