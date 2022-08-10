@@ -12,7 +12,6 @@
       ]
     },
     {
-<<<<<<< HEAD
       "id": "3",
       "bucket_title": "Bucket 3",
       "videos": [
@@ -27,11 +26,16 @@
           "video_link": "Akshat"
         }
       ]
-=======
-      "id": "2",
-      "bucket_title": "Bucket 2",
-      "videos": []
->>>>>>> 772c2f46bec2f9374a4281c2d6cbe1c8405ae12f
+    },
+    {
+      "bucket_title": "My Bucket",
+      "videos": [],
+      "id": "i0QVx3m"
+    },
+    {
+      "bucket_title": "My Bucket 1",
+      "videos": [],
+      "id": "39RZFrj"
     }
   ],
   "history": []

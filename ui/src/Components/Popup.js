@@ -2,14 +2,30 @@ import "./Stylesheets/Popup.css";
 import { Button, Modal, Input } from 'antd';
 import React, { useState } from 'react';
 
-const Popup = () => {
+const Popup = (props) => {
   const [isModalVisible, setIsModalVisible] = useState(false);
+  const [name,setName] = useState('');
 
   const showModal = () => {
     setIsModalVisible(true);
   };
 
-  const handleOk = () => {
+  const handleOk = async () => {
+    let data = {
+      "bucket_title": name,
+      "videos" : []
+    }
+    await fetch(`http://localhost:8000/buckets/`, {
+        method: 'POST', mode: 'cors',credentials: 'same-origin',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        referrerPolicy: 'no-referrer',
+        body: JSON.stringify(data)
+    });
+    let response = await fetch("http://localhost:8000/buckets",{method: "GET"});
+    response = await response.json();
+    props.setData(response);
     setIsModalVisible(false);
   };
 
@@ -28,7 +44,7 @@ const Popup = () => {
       
       footer={[
           
-          <Button className="add-btn" key="submit" type="primary" visible={isModalVisible} onOk={handleOk} onCancel={handleCancel}>
+          <Button className="add-btn" key="submit" type="primary" visible={isModalVisible} onClick={handleOk} onOk={handleOk} onCancel={handleCancel}>
             OK
           </Button>
           
@@ -36,7 +52,7 @@ const Popup = () => {
             
             <div className="enter-bucket">
         <p className="select-bucket-p">ENTER BUCKET NAME</p>
-        <Input className="bucket-text-box" placeholder="Please Enter" onChange={console.log("bucket name")}/>
+        <Input className="bucket-text-box" placeholder="Please Enter" onChange={event=>{setName(event.target.value)}}/>
         </div>
       </Modal>
     </>
