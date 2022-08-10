@@ -3,18 +3,7 @@
     {
       "id": "1",
       "bucket_title": "Bucket 1",
-      "videos": [
-        {
-          "video_id": 0,
-          "video_name": "Akshat",
-          "video_link": "Akshat"
-        },
-        {
-          "video_id": 1,
-          "video_name": "asnc",
-          "video_link": "k n"
-        }
-      ]
+      "videos": []
     },
     {
       "id": "3",
