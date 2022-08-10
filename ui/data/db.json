@@ -3,58 +3,19 @@
     {
       "id": "1",
       "bucket_title": "Bucket 1",
-      "videos": [
-        {
-          "video_id": 0,
-          "video_name": "Akshat",
-          "video_link": "123466"
-        },
-        {
-          "video_id": 1,
-          "video_name": "fddff",
-          "video_link": "gfdgfd"
-        }
-      ]
+      "videos": []
     },
     {
       "id": "2",
       "bucket_title": "Bucket 2",
-      "videos": [
-        {
-          "video_id": 0,
-          "video_name": "d",
-          "video_link": "d"
-        }
-      ]
+      "videos": []
     },
     {
       "id": "3",
       "bucket_title": "Bucket 3",
-      "videos": [
-        {
-          "video_id": 0,
-          "video_name": "sgsgs",
-          "video_link": "vvc"
-        }
-      ]
+      "videos": []
     }
   ],
   "history": [
-    {
-      "bucket_id": "1",
-      "bucket_title": "Bucket 1",
-      "video_name": "Akshat",
-      "video_link": "123466",
-      "last_played": "2022-08-10T09:35:04.053Z",
-      "id": 1
-    },
-    {
-      "bucket_id": "3",
-      "bucket_title": "Bucket 3",
-      "video_name": "sgsgs",
-      "video_link": "vvc",
-      "last_played": "2022-08-10T09:35:12.254Z",
-      "id": 2
-    }
   ]
 }
