@@ -6,16 +6,16 @@
       "videos": []
     },
     {
-      "id": "2",
-      "bucket_title": "Bucket 2",
-      "videos": []
-    },
-    {
       "id": "3",
       "bucket_title": "Bucket 3",
-      "videos": []
+      "videos": [
+        {
+          "video_id": 0,
+          "video_name": "Akshat",
+          "video_link": "Akshat"
+        }
+      ]
     }
   ],
-  "history": [
-  ]
+  "history": []
 }

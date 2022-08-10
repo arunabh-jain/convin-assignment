@@ -10,6 +10,7 @@ const Modalbox = (props) => {
   const [videoName, setVideoName] = useState('');
   const [videoLink, setVideoLink] = useState('');
   const [bucketNameData,setBucketNameData] = useState([]);
+  const [selectedBucket,setSelectedBucket] = useState(props.bucketID);
 
   useEffect(() => {
     const fetchData = async () =>{
@@ -20,7 +21,6 @@ const Modalbox = (props) => {
     if(props.btnName==="EDIT"){
       fetchData();
     }
-      
   }, [isModalVisible])
   
 
@@ -53,8 +53,50 @@ const Modalbox = (props) => {
     setIsModalVisible(false);
   };
 
-  const handleOkVideoCard = async () => {
+  const onChange = (value) => {
+    setSelectedBucket(value);
+  };
 
+  const handleOkVideoCard = async () => {
+    if(selectedBucket!==props.bucketID){
+      let response = await fetch(`http://localhost:8000/buckets/${selectedBucket}`,{method: "GET"});
+      let data = await response.json();
+      let index = (data.videos.length===0) ? 0 :data.videos[data.videos.length-1].video_id+1;
+      const newData = {
+        "video_id": index,
+        "video_name":props.videoName,
+        "video_link":props.videoLink
+      }
+      data.videos[index]=newData;
+      await fetch(`http://localhost:8000/buckets/${selectedBucket}`, {
+        method: 'PUT', mode: 'cors',credentials: 'same-origin',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        referrerPolicy: 'no-referrer',
+        body: JSON.stringify(data)
+      });
+
+      response = await fetch(`http://localhost:8000/buckets/${props.bucketID}`,{method: "GET"});
+      data = await response.json();
+      index = props.videoId;
+      let videos = data.videos.filter((video)=>{
+        return video.video_id!==index;
+      })
+      data.videos = videos;
+      await fetch(`http://localhost:8000/buckets/${props.bucketID}`, {
+        method: 'PUT', mode: 'cors',credentials: 'same-origin',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        referrerPolicy: 'no-referrer',
+        body: JSON.stringify(data)
+      });
+
+      response = await fetch("http://localhost:8000/buckets",{method: "GET"});
+      response = await response.json();
+      props.setData(response);
+    }
     setIsModalVisible(false);
   };
 
@@ -84,7 +126,7 @@ const Modalbox = (props) => {
           props.btnName==="EDIT" &&
           <div className="dropdown-body">
           <p className="dropdown-p">VIDEO BUCKET</p>
-          <DropdownMenu bucketName={props.bucketName} bucketNameData={bucketNameData}/>
+          <DropdownMenu key={props.bucketID} bucketName={props.bucketName} bucketNameData={bucketNameData} onChange={onChange}/>
           </div>
         }
         <div className="select-name">

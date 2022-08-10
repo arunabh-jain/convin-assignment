@@ -18,9 +18,8 @@ const Bucket = (props) => {
     <div className="bucket-body">
       {     
         videoData.map((data)=>{
-          return(<VideoCard key={data.video_id} id={data.id} name={data.video_name} link={data.video_link} bucketID={props.id} bucketName={props.title}/>)
+          return(<VideoCard key={data.video_id} setData={props.setData} id={data.video_id} name={data.video_name} link={data.video_link} bucketID={props.id} bucketName={props.title}/>)
         })
-        
       }
       </div>
     <div className="bucket-footer">  

@@ -27,7 +27,7 @@ const VideoCard = (props) => {
         <div className="card">
             <p className="video-name">{props.name}</p>
             <Button size="middle" className="play-btn" type="primary" onClick={saveHistory}>VIEW</Button>
-            <Modalbox btnName="EDIT" videoId={props.id} bucketName={props.bucketName} bucketID={props.bucketID} videoName={props.name} videoLink={props.link}/>
+            <Modalbox btnName="EDIT" setData={props.setData} videoId={props.id} bucketName={props.bucketName} bucketID={props.bucketID} videoName={props.name} videoLink={props.link}/>
         </div>
     )
 };
