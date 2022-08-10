@@ -22,7 +22,7 @@ const Homepage = () => {
         <div className="body">
             {
                 data.map((data)=>{
-                    return(<Bucket key={data.id} id={data.id} title={data.bucket_title} videos={data.videos}/>)
+                    return(<Bucket key={data.id} id={data.id} title={data.bucket_title} videos={data.videos} setData={setData}/>)
                 })
             }
         </div>

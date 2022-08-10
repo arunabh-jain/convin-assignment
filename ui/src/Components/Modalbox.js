@@ -1,6 +1,6 @@
 import "./Stylesheets/Modalbox.css";
 import { Button, Modal, Input } from 'antd';
-import React, { useState } from 'react';
+import React, { useState} from 'react';
 import DropdownMenu from './Dropdown';
 import { useNavigate } from "react-router-dom";
 
@@ -14,8 +14,9 @@ const Modalbox = (props) => {
     setIsModalVisible(true);
   };
 
+
   const handleOkBucket = async () => {
-    const response = await fetch(`http://localhost:8000/buckets/${props.id}`,{method: "GET"});
+    let response = await fetch(`http://localhost:8000/buckets/${props.id}`,{method: "GET"});
     const data = await response.json();
     let index = data.videos.length;
     const newData = {
@@ -24,7 +25,7 @@ const Modalbox = (props) => {
       "video_link":videoLink
     }
     data.videos[index]=newData;
-    const res = await fetch(`http://localhost:8000/buckets/${props.id}`, {
+    await fetch(`http://localhost:8000/buckets/${props.id}`, {
         method: 'PUT', mode: 'cors',credentials: 'same-origin',
         headers: {
             'Content-Type': 'application/json'
@@ -32,7 +33,10 @@ const Modalbox = (props) => {
         referrerPolicy: 'no-referrer',
         body: JSON.stringify(data)
     });
-    console.log(res.json());
+    response = await fetch("http://localhost:8000/buckets",{method: "GET"});
+    response = await response.json();
+    props.setData(response);
+    
     navigate("/");
     setIsModalVisible(false);
   };
