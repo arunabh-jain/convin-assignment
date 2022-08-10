@@ -2,7 +2,7 @@ import "./Stylesheets/VideoCard.css";
 import { Button, Checkbox } from 'antd';
 import Modalbox from '../Components/Modalbox';
 import React from 'react';
-
+import VideoFrame from './VideoFrame';
 
 const VideoCard = (props) => {
 
@@ -32,6 +32,9 @@ const VideoCard = (props) => {
             referrerPolicy: 'no-referrer',
             body: JSON.stringify(data)
         });
+
+        //View I Frame Code
+        <VideoFrame videoLink = {props.link}/>
     }
 
     return(

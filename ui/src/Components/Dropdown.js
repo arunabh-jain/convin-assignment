@@ -21,7 +21,7 @@ const Dropdown = (props) => (
   >
     { 
       props.bucketNameData.map((data)=>{
-        return(<Option value={data.id}>{data.bucket_title}</Option>)
+        return(<Option key={data.id} value={data.id}>{data.bucket_title}</Option>)
       })
     }
   </Select>

@@ -22,6 +22,7 @@ const Bucket = (props) => {
   }   
   useEffect(() => {setVideoData(props.videos.sort(GetSortOrder()));}, [props.videos]);
   useEffect(() => {setDisplayVideoData(videoData);}, [videoData]);
+
   const addElementsToDelete = (videoID) => {
     setElementsToDelete(oldArray => [...oldArray, videoID])
   }
@@ -31,7 +32,6 @@ const Bucket = (props) => {
   }
 
   const setSearch = (value) => {
-    console.log(value);
     if(value==='')
       setDisplayVideoData(videoData);
     else

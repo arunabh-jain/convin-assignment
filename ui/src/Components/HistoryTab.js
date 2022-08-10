@@ -22,7 +22,6 @@ const Tableview = () => {
           'Content-Type': 'application/json'
       },
       referrerPolicy: 'no-referrer',
-      //body: JSON.stringify(data)
     });
     let response = await fetch("http://localhost:8000/history",{method: "GET"});
     response = await response.json();
