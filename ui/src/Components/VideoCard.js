@@ -16,7 +16,7 @@ const VideoCard = (props) => {
     };
 
     const saveHistory = async() =>{
-        const data = {
+        let data = {
             "bucket_id": props.bucketID,
             "bucket_title": props.bucketName,
             "video_id": props.id,
@@ -32,9 +32,8 @@ const VideoCard = (props) => {
             referrerPolicy: 'no-referrer',
             body: JSON.stringify(data)
         });
-
         //View I Frame Code
-        <VideoFrame videoLink = {props.link}/>
+        //<VideoFrame videoLink = {props.link}/>
     }
 
     return(

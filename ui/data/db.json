@@ -27,15 +27,5 @@
       "videos": []
     }
   ],
-  "history": [
-    {
-      "bucket_id": "1",
-      "bucket_title": "Bucket 1",
-      "video_id": 1,
-      "video_name": "Akshat",
-      "video_link": "Gadodia",
-      "last_played": "2022-08-10T22:00:57.577Z",
-      "id": 1
-    }
-  ]
+  "history": []
 }

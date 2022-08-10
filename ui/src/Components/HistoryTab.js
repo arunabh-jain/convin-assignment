@@ -3,7 +3,7 @@ import { Button,Table} from 'antd';
 import React from 'react';
 import { useState, useEffect } from 'react';
 
-const Tableview = () => {
+const Tableview = (props) => {
   const[history,setHistory] = useState([])
 
   useEffect(() => {
@@ -13,7 +13,7 @@ const Tableview = () => {
       setHistory(data);
     }
     fetchHistory()
-  }, [])
+  }, [props.active])
   
   const deleteHistory = async (id) => {
     await fetch(`http://localhost:8000/history/${id}`, {
