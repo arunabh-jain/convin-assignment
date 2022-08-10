@@ -1,7 +1,9 @@
 import React from 'react'
+import errorPage from ".../public/page-error.jpg";
+
 const PageNotFound = () => {
   return (
-    <p>ERROR</p>
+    <img src={errorPage} alt='Page not found' />
   )
 }
 
