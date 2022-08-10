@@ -2,13 +2,27 @@ import "./Stylesheets/Modalbox.css";
 import { Button, Modal, Input } from 'antd';
 import React, { useState} from 'react';
 import DropdownMenu from './Dropdown';
-import { useNavigate } from "react-router-dom";
+import { useEffect } from 'react';
+
 
 const Modalbox = (props) => {
   const [isModalVisible, setIsModalVisible] = useState(false);
   const [videoName, setVideoName] = useState(undefined);
   const [videoLink, setVideoLink] = useState(undefined);
-  const navigate = useNavigate();
+  const [bucketNameData,setBucketNameData] = useState([]);
+
+  useEffect(() => {
+    const fetchData = async () =>{
+      const response = await fetch("http://localhost:8000/buckets",{method: "GET"});
+      const data = await response.json();
+      setBucketNameData(data);
+    }
+    if(props.btnName==="EDIT"){
+      fetchData();
+    }
+      
+  }, [isModalVisible])
+  
 
   const showModal = () => {
     setIsModalVisible(true);
@@ -36,8 +50,6 @@ const Modalbox = (props) => {
     response = await fetch("http://localhost:8000/buckets",{method: "GET"});
     response = await response.json();
     props.setData(response);
-    
-    navigate("/");
     setIsModalVisible(false);
   };
 
@@ -67,17 +79,22 @@ const Modalbox = (props) => {
           
         ]}
         >
-        <div className="dropdown-body">
-        <p className="dropdown-p">VIDEO BUCKET</p>
-        <DropdownMenu/>
-        </div>
+        {
+          props.btnName==="EDIT" &&
+          <div className="dropdown-body">
+          <p className="dropdown-p">VIDEO BUCKET</p>
+          <DropdownMenu bucketName={props.bucketName} bucketNameData={bucketNameData}/>
+          </div>
+        }
         <div className="select-name">
         <p className="select-p">VIDEO NAME</p>
-        <Input className="text-box" placeholder="Enter Name" onChange={event=>setVideoName(event.target.value)}/>
+        <Input className="text-box" placeholder="Enter Name" onChange={event=>setVideoName(event.target.value)}
+          value={props.btnName==="EDIT" ? props.videoName : ''}/>
         </div>
         <div className="select-link">
         <p className="select-p">VIDEO URL</p>
-        <Input className="text-box" placeholder="Enter Link" onChange={event=>setVideoLink(event.target.value)}/>
+        <Input className="text-box" placeholder="Enter Link" onChange={event=>setVideoLink(event.target.value)}
+          value={props.btnName==="EDIT" ? props.videoLink : ''}/>
         </div>
       </Modal>
     </>

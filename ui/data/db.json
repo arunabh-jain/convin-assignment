@@ -6,18 +6,8 @@
       "videos": [
         {
           "video_id": 0,
-          "video_name": "new",
-          "video_link": "new"
-        },
-        {
-          "video_id": 1,
-          "video_name": "new",
-          "video_link": "new"
-        },
-        {
-          "video_id": 2,
-          "video_name": "fv",
-          "video_link": "fxv.com"
+          "video_name": "Akshat",
+          "video_link": "123466"
         }
       ]
     },
@@ -27,69 +17,15 @@
       "videos": [
         {
           "video_id": 0,
-          "video_name": "ds",
-          "video_link": "sdfsf"
-        },
-        {
-          "video_id": 1,
-          "video_name": "adc",
-          "video_link": "cdz.com"
-        },
-        {
-          "video_id": 2,
-          "video_name": "dxcv",
-          "video_link": "fdvx.in"
-        },
-        {
-          "video_id": 3
-        },
-        {
-          "video_id": 4
-        },
-        {
-          "video_id": 5
-        },
-        {
-          "video_id": 6
+          "video_name": "d",
+          "video_link": "d"
         }
       ]
     },
     {
       "id": "3",
       "bucket_title": "Bucket 3",
-      "videos": [
-        {
-          "video_id": 0,
-          "video_name": "HELLO",
-          "video_link": "HTTPS://"
-        },
-        {
-          "video_id": 1,
-          "video_name": "aac",
-          "video_link": "dvd.com"
-        },
-        {
-          "video_id": 2,
-          "video_name": "sxv",
-          "video_link": "dv.com"
-        },
-        {
-          "video_id": 3,
-          "video_name": "dfv",
-          "video_link": "vsd.f"
-        },
-        {
-          "video_id": 4,
-          "video_name": "xv",
-          "video_link": "vx"
-        },
-        {
-          "video_id": 5
-        },
-        {
-          "video_id": 6
-        }
-      ]
+      "videos": []
     }
   ],
   "history": [

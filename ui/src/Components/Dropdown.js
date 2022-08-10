@@ -12,7 +12,9 @@ const onSearch = (value) => {
   console.log('search:', value);
 };
 
-const Dropdown = () => (
+const Dropdown = (props) => (
+  
+
   <Select
     showSearch
     placeholder="Please Select"
@@ -20,11 +22,14 @@ const Dropdown = () => (
     onChange={onChange}
     onSearch={onSearch}
     allowClear
+    value={props.bucketName}
     filterOption={(input, option) => option.children.toLowerCase().includes(input.toLowerCase())}
   >
-    <Option value="jack">Jack</Option>
-    <Option value="lucy">Lucy</Option>
-    <Option value="tom">Tom</Option>
+    {
+      props.bucketNameData.map((data)=>{
+        return(<Option value="jack">{data.bucket_title}</Option>)
+      })
+    }
   </Select>
 );
 
