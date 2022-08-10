@@ -1,41 +1,9 @@
 {
   "buckets": [
     {
-      "id": "1",
-      "bucket_title": "Bucket 1",
-      "videos": [
-        {
-          "video_id": 0,
-          "video_name": "Akshat",
-          "video_link": "Gadodia"
-        }
-      ]
-    },
-    {
-      "id": "3",
-      "bucket_title": "Bucket 3",
-      "videos": [
-        {
-          "video_id": 0,
-          "video_name": "Akshat",
-          "video_link": "Akshat"
-        },
-        {
-          "video_id": 1,
-          "video_name": "Akshat",
-          "video_link": "Akshat"
-        }
-      ]
-    },
-    {
       "bucket_title": "My Bucket",
       "videos": [],
-      "id": "i0QVx3m"
-    },
-    {
-      "bucket_title": "My Bucket 1",
-      "videos": [],
-      "id": "39RZFrj"
+      "id": 1
     }
   ],
   "history": []
