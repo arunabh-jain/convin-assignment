@@ -3,10 +3,17 @@ import { Button, Checkbox } from 'antd';
 import Modalbox from '../Components/Modalbox';
 import React from 'react';
 
-const onChange = (e) => {
-    console.log(`checked = ${e.target.checked}`);
-  };
+
 const VideoCard = (props) => {
+
+    const onChange = (e) => {
+        if(e.target.checked){
+            props.addElementsToDelete(props.id)
+        }
+        else{
+            props.removeElementsToDelete(props.id)
+        }
+    };
 
     const saveHistory = async() =>{
         const data = {
@@ -34,7 +41,7 @@ const VideoCard = (props) => {
             </div>
             <p className="video-name">{props.name}</p>
             <Button size="middle" className="play-btn" type="primary" onClick={saveHistory}>VIEW</Button>
-            <Modalbox btnName="EDIT" setData={props.setData} videoId={props.id} bucketName={props.bucketName} bucketID={props.bucketID} videoName={props.name} videoLink={props.link}/>
+            <Modalbox btnName="EDIT" setData={props.setData} videoId={props.id} bucketName={props.bucketName} bucketID={props.bucketID} videoName={props.name} videoLink={props.link} deleteElementsToDelete={props.deleteElementsToDelete}/>
         </div>
     )
 };
