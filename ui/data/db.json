@@ -3,24 +3,12 @@
     {
       "id": "1",
       "bucket_title": "Bucket 1",
-      "videos": [
-        {
-          "video_id": 0,
-          "video_name": "Akshat",
-          "video_link": "123466"
-        }
-      ]
+      "videos": []
     },
     {
       "id": "2",
       "bucket_title": "Bucket 2",
-      "videos": [
-        {
-          "video_id": 0,
-          "video_name": "d",
-          "video_link": "d"
-        }
-      ]
+      "videos": []
     },
     {
       "id": "3",
@@ -29,21 +17,5 @@
     }
   ],
   "history": [
-    {
-      "id": 1,
-      "bucket_id": "A",
-      "bucket_title": "Bucket1",
-      "video_id": "A1",
-      "video_name": "qwert",
-      "last_played": "25/04/2022"
-    },
-    {
-      "id": 2,
-      "bucket_id": "A",
-      "bucket_title": "Bucket1",
-      "video_id": "A1",
-      "video_name": "qwert",
-      "last_played": "25/04/2022"
-    }
   ]
 }

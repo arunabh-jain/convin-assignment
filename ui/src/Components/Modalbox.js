@@ -7,8 +7,8 @@ import { useEffect } from 'react';
 
 const Modalbox = (props) => {
   const [isModalVisible, setIsModalVisible] = useState(false);
-  const [videoName, setVideoName] = useState(undefined);
-  const [videoLink, setVideoLink] = useState(undefined);
+  const [videoName, setVideoName] = useState('');
+  const [videoLink, setVideoLink] = useState('');
   const [bucketNameData,setBucketNameData] = useState([]);
 
   useEffect(() => {
@@ -32,7 +32,7 @@ const Modalbox = (props) => {
   const handleOkBucket = async () => {
     let response = await fetch(`http://localhost:8000/buckets/${props.id}`,{method: "GET"});
     const data = await response.json();
-    let index = data.videos.length;
+    let index = (data.videos.length===0) ? 0 :data.videos[data.videos.length-1].video_id+1;
     const newData = {
       "video_id": index,
       "video_name":videoName,
@@ -54,6 +54,7 @@ const Modalbox = (props) => {
   };
 
   const handleOkVideoCard = async () => {
+
     setIsModalVisible(false);
   };
 
@@ -89,12 +90,12 @@ const Modalbox = (props) => {
         <div className="select-name">
         <p className="select-p">VIDEO NAME</p>
         <Input className="text-box" placeholder="Enter Name" onChange={event=>setVideoName(event.target.value)}
-          value={props.btnName==="EDIT" ? props.videoName : ''}/>
+          value={props.btnName==="EDIT" ? props.videoName : videoName}/>
         </div>
         <div className="select-link">
         <p className="select-p">VIDEO URL</p>
         <Input className="text-box" placeholder="Enter Link" onChange={event=>setVideoLink(event.target.value)}
-          value={props.btnName==="EDIT" ? props.videoLink : ''}/>
+          value={props.btnName==="EDIT" ? props.videoLink : videoLink}/>
         </div>
       </Modal>
     </>
