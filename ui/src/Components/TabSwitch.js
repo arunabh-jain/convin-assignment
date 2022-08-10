@@ -22,15 +22,6 @@ const TabSwitch = () => {
 
     return(
     <Fragment>
-        <div className="header">
-        <div className="head">
-        <div className="image">
-                <img src="https://uploads-ssl.webflow.com/606c4d4ed5ba7ca3bc774c4c/606c5fcd82475240c607a79f_LOGO.svg" alt="logo" className="logo"/>
-        </div>
-        <h1>VIDEO BUCKET LIST</h1>
-        </div>
-        </div>
-        
     <Tabs title="VIDEO BUCKET LIST" defaultActiveKey="1" onChange={onChange}>
     <TabPane tab="Home" key="1">
         <div className="tab-body">
@@ -45,6 +36,15 @@ const TabSwitch = () => {
             <HistoryTab/>
     </TabPane>
 </Tabs>
+<div className="header">
+        <div className="head">
+        <div className="image">
+                <img src="https://uploads-ssl.webflow.com/606c4d4ed5ba7ca3bc774c4c/606c5fcd82475240c607a79f_LOGO.svg" alt="logo" className="logo"/>
+        </div>
+        <p>VIDEO BUCKET LIST</p>
+        </div>
+        </div>
+        
 </Fragment>
 );
 }
