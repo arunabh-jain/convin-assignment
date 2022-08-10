@@ -5,10 +5,6 @@ import React,{ Fragment, useEffect,useState } from "react";
 import { Tabs } from 'antd';
 const { TabPane } = Tabs;
 
-const onChange = (key) => {
-  console.log(key);
-};
-
 const TabSwitch = () => {
     const [data, setData] = useState([]);
     useEffect(() => {
@@ -22,7 +18,7 @@ const TabSwitch = () => {
 
     return(
     <Fragment>
-    <Tabs title="VIDEO BUCKET LIST" defaultActiveKey="1" onChange={onChange}>
+    <Tabs title="VIDEO BUCKET LIST" defaultActiveKey="1" >
     <TabPane tab="Home" key="1">
         <div className="tab-body">
             {

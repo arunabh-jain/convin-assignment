@@ -4,18 +4,18 @@ import "./Stylesheets/Searchbar.css";
 
 const { Search } = Input;
 
-const onSearch = (value) => console.log(value);
+const Searchbar = (props) => {
 
-const Searchbar = () => (
-  
+  return(
     <Search className="searchbar"
       placeholder="Search Task"
       allowClear
       enterButton
-      size="small"  
-      onSearch={onSearch}
+      size="small" 
+      onSearch={(value)=>props.setSearch(value)}
+      onClear={(value)=>props.onSearchClear(value)}
     />
-
-);
+  )
+}
 
 export default Searchbar;
