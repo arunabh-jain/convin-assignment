@@ -32,8 +32,8 @@ return (
         
       ]}>
           
-      <div>
-      <iframe width="560" height="315" src={props.link}
+      <div className='videoplayer-div'>
+      <iframe classname="videoplayer" src={props.link}
       title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope"
       allowfullscreen></iframe>
       </div>
