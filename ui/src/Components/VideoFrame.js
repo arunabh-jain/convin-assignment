@@ -6,7 +6,6 @@ const VideoFrame = (props) => {
   const [isModalVisible, setIsModalVisible] = useState(false);
 
   const showModal = () => {
-    console.log(props.link)
     if(props.from!=="history")
       props.onClick();
     else{
