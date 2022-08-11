@@ -16,13 +16,14 @@ const VideoCard = (props) => {
     };
 
     const saveHistory = async() =>{
+        let date = new Date();
         let data = {
             "bucket_id": props.bucketID,
             "bucket_title": props.bucketName,
             "video_id": props.id,
             "video_name": props.name,
             "video_link":props.link,
-            "last_played": new Date()
+            "last_played": date.toLocaleTimeString()+" "+date.toLocaleDateString() 
         }
         await fetch(`http://localhost:8000/history/`, {
             method: 'POST', mode: 'cors',credentials: 'same-origin',
@@ -38,7 +39,7 @@ const VideoCard = (props) => {
             <div className="card">
                     <Checkbox className="check-box" onChange={onChange}/>
                     <p className="video-name">{props.name}</p>
-                    <VideoFrame videoLink = {props.link} onClick={saveHistory}/>
+                    <VideoFrame link = {props.link} onClick={saveHistory}/>
                     <Modalbox btnName="EDIT" setData={props.setData} videoId={props.id} bucketName={props.bucketName} bucketID={props.bucketID} videoName={props.name} videoLink={props.link} deleteElementsToDelete={props.deleteElementsToDelete}/>
             </div>
     )

@@ -6,6 +6,12 @@ const VideoFrame = (props) => {
   const [isModalVisible, setIsModalVisible] = useState(false);
 
   const showModal = () => {
+    console.log(props.link)
+    if(props.from!=="history")
+      props.onClick();
+    else{
+      props.onClick(props.record.bucket_id,props.record.bucket_title,props.record.video_id,props.record.video_name,props.record.video_link)
+    }
     setIsModalVisible(true);
   };
 
@@ -28,7 +34,7 @@ return (
           
       <div>
       <iframe width="560" height="315" src={props.link}
-      title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope"
       allowfullscreen></iframe>
       </div>
 
