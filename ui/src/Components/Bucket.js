@@ -50,6 +50,19 @@ const Bucket = (props) => {
     setElementsToDelete(elementsToDelete.filter(value=>{return value!==videoID}))
   }
 
+  const deleteBucket = async () => {
+    await fetch(`http://localhost:8000/buckets/${props.id}`, {
+        method: 'DELETE', mode: 'cors',credentials: 'same-origin',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        referrerPolicy: 'no-referrer'
+    });
+    let response = await fetch("http://localhost:8000/buckets",{method: "GET"});
+    response = await response.json();
+    props.setData(response);
+  }
+
   const deleteElements = async() => {
     let response = await fetch(`http://localhost:8000/buckets/${props.id}`,{method: "GET"});
     let data = await response.json();
@@ -74,8 +87,8 @@ const Bucket = (props) => {
   <div className="bucket-outer">
     <div className="bucket-header">
       <p>{props.title}</p>
-     <BucketEdit/>
-     <Button type="text" size="large" onClick={console.log("Bucket Deleted")}><DeleteOutlined/></Button>
+     <BucketEdit id={props.id} setData={props.setData}/>
+     <Button type="text" size="large" onClick={deleteBucket}><DeleteOutlined/></Button>
       <Searchbar setSearch={setSearch} onSearchClear={onSearchClear}/>
    </div>
     <div className="bucket-body">

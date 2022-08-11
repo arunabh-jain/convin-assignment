@@ -12,20 +12,21 @@ const BucketEdit = (props) => {
   };
 
   const handleOk = async () => {
-    let data = {
-      "bucket_title": name,
-    }
-    await fetch(`http://localhost:8000/buckets/`, {
-        method: 'POST', mode: 'cors',credentials: 'same-origin',
+    let response = await fetch(`http://localhost:8000/buckets/${props.id}`,{method: "GET"});
+    let data = await response.json();
+    data.bucket_title=name;
+    await fetch(`http://localhost:8000/buckets/${props.id}`, {
+        method: 'PUT', mode: 'cors',credentials: 'same-origin',
         headers: {
             'Content-Type': 'application/json'
         },
         referrerPolicy: 'no-referrer',
         body: JSON.stringify(data)
     });
-    let response = await fetch("http://localhost:8000/buckets",{method: "GET"});
+    response = await fetch("http://localhost:8000/buckets",{method: "GET"});
     response = await response.json();
     props.setData(response);
+    setName('');
     setIsModalVisible(false);
   };
 

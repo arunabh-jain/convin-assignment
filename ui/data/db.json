@@ -1,39 +1,5 @@
 {
-  "buckets": [
-    {
-      "bucket_title": "My Bucket",
-<<<<<<< HEAD
-      "videos": [],
-=======
-      "videos": [
-        {
-          "video_id": 2,
-          "video_name": "youtube",
-          "video_link": "https://www.youtube.com/embed/GErCdg7TAAg"
-        }
-      ],
->>>>>>> c00864b5e8cf355527e186a6349b327e99796895
-      "id": 1
-    },
-    {
-      "bucket_title": "Games",
-      "videos": [],
-      "id": 2
-    },
-    {
-      "bucket_title": "Educational",
-      "videos": [],
-      "id": 3
-    },
-    {
-      "bucket_title": "Educational",
-      "videos": [],
-      "id": 4
-    }
-  ],
-<<<<<<< HEAD
-  "history": []
-=======
+  "buckets": [],
   "history": [
     {
       "bucket_id": 1,
@@ -126,5 +92,4 @@
       "id": 10
     }
   ]
->>>>>>> c00864b5e8cf355527e186a6349b327e99796895
 }
