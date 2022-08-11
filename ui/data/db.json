@@ -1,21 +1,4 @@
 {
-  "buckets": [
-    {
-      "bucket_title": "dd",
-      "videos": [
-        {
-          "video_id": 0,
-          "video_name": "mmm",
-          "video_link": "klmlkm"
-        }
-      ],
-      "id": 1
-    },
-    {
-      "bucket_title": "gg",
-      "videos": [],
-      "id": 2
-    }
-  ],
+  "buckets": [],
   "history": []
 }

@@ -70,32 +70,38 @@ const Tableview = (props) => {
       title: 'VIDEO NAME',
       dataIndex: 'video_name',
       key: 'video_name',
+      width: "30vw",
     },
     {
       title: 'BUCKET NAME',
       dataIndex: 'bucket_title',
       key: 'bucket_title',
+      width: "10vw",
     },
     {
       title: 'VIDEO LINK',
       dataIndex: 'video_link',
       key: 'video_link',
+      width: "50vw",
     },
     {
       title: 'PLAY VIDEO',
       dataIndex: 'video_link',
       key: 'video_link_play',
+      width: "10vw",
       render : (_, record) => <VideoFrame from="history" link = {record.video_link} onClick={playVideo} record={record}/>
     },
     {
       title: 'PLAY TIME',
       dataIndex: 'last_played',
       key: 'last_played',
+      width: "20vw",
     },
     {
       title: 'DELETE',
       dataIndex: 'id',
       key: 'id',
+      width: "10vw",
       render : (_, record) => <Button type="text" onClick={()=>{deleteHistory(record.id)}}><DeleteOutlined /></Button>
     },
   ];

@@ -21,7 +21,7 @@
 }
 
 .bucket-body{
-    height:450px;
+    height:440px;
     display: flex;
     padding: 10px;
     padding-top: 20px;
@@ -43,8 +43,9 @@
     
 }
 .bucket-outer{
-    min-height: 550px;  
+    max-height: 540px;  
     min-width: 450px;
+    max-width: 450px;
     background-color: #d4d4d4;
     box-shadow: 5px 5px 10px rgba(0,0,0,0.5);
     display: flex;
