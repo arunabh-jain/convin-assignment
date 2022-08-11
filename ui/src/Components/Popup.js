@@ -4,9 +4,10 @@ import React, { useState } from 'react';
 
 const Popup = (props) => {
   const [isModalVisible, setIsModalVisible] = useState(false);
-  const [name,setName] = useState('');
+  const [name,setName] = useState(undefined);
 
   const showModal = () => {
+    setName(undefined)
     setIsModalVisible(true);
   };
 
@@ -26,11 +27,12 @@ const Popup = (props) => {
     let response = await fetch("http://localhost:8000/buckets",{method: "GET"});
     response = await response.json();
     props.setData(response);
-    setName('')
+    setName(undefined)
     setIsModalVisible(false);
   };
 
   const handleCancel = () => {
+    setName(undefined)
     setIsModalVisible(false);
   };
 

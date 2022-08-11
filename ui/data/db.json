@@ -1,31 +1,4 @@
 {
-  "buckets": [
-    {
-      "bucket_title": "Akshat",
-      "videos": [
-        {
-          "video_id": 0,
-          "video_name": "Akshat",
-          "video_link": "https://www.youtube.com/embed/fBRzD6dwJfw"
-        }
-      ],
-      "id": 1
-    },
-    {
-      "bucket_title": "Bucket 2",
-      "videos": [],
-      "id": 2
-    }
-  ],
-  "history": [
-    {
-      "bucket_id": 1,
-      "bucket_title": "Akshat",
-      "video_id": 0,
-      "video_name": "Akshat",
-      "video_link": "https://www.youtube.com/embed/fBRzD6dwJfw",
-      "last_played": "12:38:34 PM 8/11/2022",
-      "id": 1
-    }
-  ]
+  "buckets": [],
+  "history": []
 }
