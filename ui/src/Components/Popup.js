@@ -41,6 +41,7 @@ const Popup = (props) => {
       <Button size="middle" className="open-bucket-btn" type="primary" onClick={showModal}>ADD BUCKET
       </Button>
       <Modal
+      destroyOnClose
       title="ADD BUCKET"
       visible={isModalVisible}
       onCancel={handleCancel}

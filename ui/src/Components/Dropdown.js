@@ -10,6 +10,7 @@ const Dropdown = (props) => (
   <Select
     placeholder="Please Select"
     optionFilterProp="children"
+    defaultValue={props.bucketName}
     onChange={props.onChange}
     allowClear
     filterOption={(input, option) => option.children.toLowerCase().includes(input.toLowerCase())}
