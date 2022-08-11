@@ -2,17 +2,13 @@
   "buckets": [
     {
       "bucket_title": "My Bucket",
-<<<<<<< HEAD
-      "videos": [],
-=======
       "videos": [
         {
-          "video_id": 2,
-          "video_name": "youtube",
-          "video_link": "https://www.youtube.com/embed/GErCdg7TAAg"
+          "video_id": 0,
+          "video_name": "adcsccasc",
+          "video_link": "asfas"
         }
       ],
->>>>>>> c00864b5e8cf355527e186a6349b327e99796895
       "id": 1
     },
     {
@@ -31,100 +27,15 @@
       "id": 4
     }
   ],
-<<<<<<< HEAD
-  "history": []
-=======
   "history": [
     {
       "bucket_id": 1,
       "bucket_title": "My Bucket",
-      "video_id": 2,
-      "video_name": "youtube",
-      "video_link": "https://www.youtube.com/embed/GErCdg7TAAg",
-      "last_played": "11:07:56 AM 8/11/2022",
+      "video_id": 0,
+      "video_name": "adcsccasc",
+      "video_link": "asfas",
+      "last_played": "11:39:02 AM 8/11/2022",
       "id": 1
-    },
-    {
-      "bucket_id": 1,
-      "bucket_title": "My Bucket",
-      "video_id": 2,
-      "video_name": "youtube",
-      "video_link": "https://www.youtube.com/embed/GErCdg7TAAg",
-      "last_played": "11:08:21 AM 8/11/2022",
-      "id": 2
-    },
-    {
-      "bucket_id": 1,
-      "bucket_title": "My Bucket",
-      "video_id": 2,
-      "video_name": "youtube",
-      "video_link": "https://www.youtube.com/embed/GErCdg7TAAg",
-      "last_played": "11:08:48 AM 8/11/2022",
-      "id": 3
-    },
-    {
-      "bucket_id": 1,
-      "bucket_title": "My Bucket",
-      "video_id": 2,
-      "video_name": "youtube",
-      "video_link": "https://www.youtube.com/embed/GErCdg7TAAg",
-      "last_played": "11:09:45 AM 8/11/2022",
-      "id": 4
-    },
-    {
-      "bucket_id": 1,
-      "bucket_title": "My Bucket",
-      "video_id": 2,
-      "video_name": "youtube",
-      "video_link": "https://www.youtube.com/embed/GErCdg7TAAg",
-      "last_played": "11:10:19 AM 8/11/2022",
-      "id": 5
-    },
-    {
-      "bucket_id": 1,
-      "bucket_title": "My Bucket",
-      "video_id": 2,
-      "video_name": "youtube",
-      "video_link": "https://www.youtube.com/embed/GErCdg7TAAg",
-      "last_played": "11:10:35 AM 8/11/2022",
-      "id": 6
-    },
-    {
-      "bucket_id": 1,
-      "bucket_title": "My Bucket",
-      "video_id": 2,
-      "video_name": "youtube",
-      "video_link": "https://www.youtube.com/embed/GErCdg7TAAg",
-      "last_played": "11:10:55 AM 8/11/2022",
-      "id": 7
-    },
-    {
-      "bucket_id": 1,
-      "bucket_title": "My Bucket",
-      "video_id": 2,
-      "video_name": "youtube",
-      "video_link": "https://www.youtube.com/embed/GErCdg7TAAg",
-      "last_played": "11:11:30 AM 8/11/2022",
-      "id": 8
-    },
-    {
-      "bucket_id": 1,
-      "bucket_title": "My Bucket",
-      "video_id": 2,
-      "video_name": "youtube",
-      "video_link": "https://www.youtube.com/embed/GErCdg7TAAg",
-      "last_played": "11:11:38 AM 8/11/2022",
-      "id": 9
-    },
-    {
-      "bucket_id": 1,
-      "bucket_title": "My Bucket",
-      "video_id": 2,
-      "video_name": "youtube",
-      "video_link": "https://www.youtube.com/embed/GErCdg7TAAg",
-      "last_played": "11:11:43 AM 8/11/2022",
-      "id": 10
     }
   ]
->>>>>>> c00864b5e8cf355527e186a6349b327e99796895
 }
