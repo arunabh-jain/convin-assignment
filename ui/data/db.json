@@ -2,9 +2,72 @@
   "buckets": [
     {
       "bucket_title": "My Bucket",
-      "videos": [],
+      "videos": [
+        {
+          "video_id": 0,
+          "video_name": "aa",
+          "video_link": "dd"
+        },
+        {
+          "video_id": 2,
+          "video_name": "youtube",
+          "video_link": "https://www.youtube.com/embed/GErCdg7TAAg"
+        }
+      ],
       "id": 1
+    },
+    {
+      "bucket_title": "Games",
+      "videos": [],
+      "id": 2
+    },
+    {
+      "bucket_title": "Educational",
+      "videos": [],
+      "id": 3
+    },
+    {
+      "bucket_title": "Educational",
+      "videos": [],
+      "id": 4
     }
   ],
-  "history": []
+  "history": [
+    {
+      "bucket_id": 1,
+      "bucket_title": "My Bucket",
+      "video_id": 0,
+      "video_name": "aa",
+      "video_link": "dd",
+      "last_played": "2022-08-10T23:02:15.784Z",
+      "id": 1
+    },
+    {
+      "bucket_id": 1,
+      "bucket_title": "My Bucket",
+      "video_id": 0,
+      "video_name": "aa",
+      "video_link": "dd",
+      "last_played": "2022-08-10T23:02:52.258Z",
+      "id": 3
+    },
+    {
+      "bucket_id": 1,
+      "bucket_title": "My Bucket",
+      "video_id": 0,
+      "video_name": "aa",
+      "video_link": "dd",
+      "last_played": "2022-08-10T23:02:52.558Z",
+      "id": 4
+    },
+    {
+      "bucket_id": 1,
+      "bucket_title": "My Bucket",
+      "video_id": 0,
+      "video_name": "aa",
+      "video_link": "dd",
+      "last_played": "2022-08-10T23:02:55.162Z",
+      "id": 17
+    }
+  ]
 }

@@ -1,5 +1,6 @@
 import "./Stylesheets/HistoryTab.css";
 import { Button,Table} from 'antd';
+import { DeleteOutlined } from '@ant-design/icons';
 import React from 'react';
 import { useState, useEffect } from 'react';
 
@@ -30,30 +31,30 @@ const Tableview = (props) => {
 
   const columns = [
     {
-      title: 'Video Name',
+      title: 'VIDEO NAME',
       dataIndex: 'video_name',
       key: 'video_name',
     },
     {
-      title: 'Bucket Name',
+      title: 'BUCKET NAME',
       dataIndex: 'bucket_title',
       key: 'bucket_title',
     },
     {
-      title: 'Video Link',
+      title: 'VIDEO LINK',
       dataIndex: 'video_link',
       key: 'video_link',
     },
     {
-      title: 'Last Played',
+      title: 'PLAY TIME',
       dataIndex: 'last_played',
       key: 'last_played',
     },
     {
-      title: '',
+      title: 'DELETE',
       dataIndex: 'id',
       key: 'id',
-      render : (_, record) => <Button type="link" onClick={()=>{deleteHistory(record.id)}}>Delete</Button>
+      render : (_, record) => <Button type="link" onClick={()=>{deleteHistory(record.id)}}><DeleteOutlined /></Button>
     },
   ];
 
@@ -61,9 +62,10 @@ const Tableview = (props) => {
     <div className="outer">
       <div className="inner">
         <Table
+        size="small"
         columns={columns}
         dataSource={history}
-        pagination={{ pageSize: 10 }}
+        pagination={{ size:"default", pageSize: 10 }}
         />
     </div>
     </div>

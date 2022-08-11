@@ -1,6 +1,6 @@
 .tab-body{
     width: 100%;
-    min-height: calc(100vh - 120px);
+    min-height: calc(100vh - 135px);
     display: flex;
     align-items: center;
     justify-content: left;
@@ -8,6 +8,7 @@
     padding:20px;
     overflow-x: auto;
     overflow-y: hidden;
+    margin-top: 15px 0 10px 0;
 }
 
 .ant-tabs-nav-wrap{
@@ -15,7 +16,7 @@
     display: flex;
     justify-content: right;
     height: 60px;
-    padding:0 50px 0 0;
+    padding:0;
     background-image: linear-gradient(360deg, #04598e, #0474CC);
     border-radius:30px !important;
     margin: auto;
@@ -49,7 +50,6 @@
     background-image: linear-gradient(180deg, #fb1ac6, #ff007b);
     border-radius: 30px;
     box-shadow: 10px 2px 15px rgba(0,0,0,0.5);
-    margin-right: 15px;
     padding: 0;
 }
 
@@ -71,6 +71,7 @@
     height: 60px;
     border-radius:30px !important;
     margin: 0;
+    gap: 30px;
 }
 
 
@@ -113,3 +114,4 @@
     background-image: linear-gradient(360deg, #000000, #444444) !important;
     margin: 0;
 }
+

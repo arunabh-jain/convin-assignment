@@ -8,7 +8,7 @@ const Searchbar = (props) => {
 
   return(
     <Search className="searchbar"
-      placeholder="Search Task"
+      placeholder="Search Video"
       allowClear
       enterButton
       size="small" 

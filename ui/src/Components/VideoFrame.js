@@ -1,12 +1,40 @@
-import React from 'react'
+import { Button, Modal } from 'antd';
+import React, { useState } from 'react';
+import "./Stylesheets/VideoFrame.css";
 
 const VideoFrame = (props) => {
-  return (
-    <div>
-        <iframe src={props.link} width="560" height="315" frameborder="0" allow="autoplay; fullscreen" 
-            allowfullscreen id="frame1"/>
-    </div>
-  )
-}
+  const [isModalVisible, setIsModalVisible] = useState(false);
 
-export default VideoFrame
+  const showModal = () => {
+    setIsModalVisible(true);
+  };
+
+  const handleCancel = () => {
+    setIsModalVisible(false);
+  };
+
+return (
+  <>
+    <Button size="middle" className="open-video" type="primary" onClick={showModal}>PLAY
+    </Button>
+    <Modal
+    title="Video Frame"
+    visible={isModalVisible}
+    onCancel={handleCancel}
+    
+    footer={[
+        
+      ]}>
+          
+      <div>
+      <iframe width="560" height="315" src={props.link}
+      title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen></iframe>
+      </div>
+
+    </Modal>
+  </>
+);
+};
+
+export default VideoFrame;

@@ -4,7 +4,6 @@ import { Button } from 'antd';
 import Searchbar from "../Components/Searchbar";
 import VideoCard from "../Components/VideoCard";
 import Modalbox from '../Components/Modalbox';
-import Popup from '../Components/Popup';
 
 const Bucket = (props) => {
   const[elementsToDelete, setElementsToDelete] = useState([])
@@ -73,7 +72,7 @@ const Bucket = (props) => {
   <div className="bucket-outer">
     <div className="bucket-header">
       <p>{props.title}</p>
-      <Popup/>
+     
       <Searchbar setSearch={setSearch} onSearchClear={onSearchClear}/>
    </div>
     <div className="bucket-body">
@@ -87,7 +86,7 @@ const Bucket = (props) => {
       }
       </div>
     <div className="bucket-footer">  
-      <Modalbox id={props.id} setData={props.setData} btnName="ADD" deleteElementsToDelete={deleteElementsToDelete}/>
+      <Modalbox  id={props.id} setData={props.setData} btnName="ADD" deleteElementsToDelete={deleteElementsToDelete}/>
       <Button size="middle" className="bucket-btn" type="primary" onClick={deleteElements}>DELETE</Button>
     </div>
   </div>

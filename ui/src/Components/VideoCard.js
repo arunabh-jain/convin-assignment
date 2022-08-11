@@ -1,5 +1,5 @@
 import "./Stylesheets/VideoCard.css";
-import { Button, Checkbox } from 'antd';
+import { Checkbox } from 'antd';
 import Modalbox from '../Components/Modalbox';
 import React from 'react';
 import VideoFrame from './VideoFrame';
@@ -32,19 +32,16 @@ const VideoCard = (props) => {
             referrerPolicy: 'no-referrer',
             body: JSON.stringify(data)
         });
-        //View I Frame Code
-        //<VideoFrame videoLink = {props.link}/>
-    }
+    };
 
     return(
-        <div className="card">
-            <div className="checkbox-div">
-            <Checkbox className="check-box" onChange={onChange}/>
+            <div className="card">
+                    <Checkbox className="check-box" onChange={onChange}/>
+                    <p className="video-name">{props.name}</p>
+                    <VideoFrame videoLink = {props.link} onClick={saveHistory}/>
+                    <Modalbox btnName="EDIT" setData={props.setData} videoId={props.id} bucketName={props.bucketName} bucketID={props.bucketID} videoName={props.name} videoLink={props.link} deleteElementsToDelete={props.deleteElementsToDelete}/>
             </div>
-            <p className="video-name">{props.name}</p>
-            <Button size="middle" className="play-btn" type="primary" onClick={saveHistory}>VIEW</Button>
-            <Modalbox btnName="EDIT" setData={props.setData} videoId={props.id} bucketName={props.bucketName} bucketID={props.bucketID} videoName={props.name} videoLink={props.link} deleteElementsToDelete={props.deleteElementsToDelete}/>
-        </div>
     )
 };
+
 export default VideoCard;

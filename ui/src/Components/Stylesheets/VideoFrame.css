@@ -1,0 +1,13 @@
+.open-video{
+    
+    background-image: linear-gradient(360deg, #04598e, #0474CC) !important;
+    border-radius: 15px;
+    border:none;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.5);
+    font-weight: 600;
+    width:70px;
+}
+
+.open-video:hover{
+    background-image: linear-gradient(360deg, #0470b3, #048ff9) !important;
+}
