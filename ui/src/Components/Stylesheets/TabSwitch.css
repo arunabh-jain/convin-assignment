@@ -81,7 +81,7 @@
     display:inline-block;
     line-height: 0;
     margin-top:3.2vw;
-    min-width: max-content;
+    width: 750px;
     color: white;
     text-align: left;
     text-shadow: 5px 5px 10px rgba(0,0,0,0.5);

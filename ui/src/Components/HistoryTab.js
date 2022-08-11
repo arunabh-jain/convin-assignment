@@ -54,7 +54,7 @@ const Tableview = (props) => {
       title: 'DELETE',
       dataIndex: 'id',
       key: 'id',
-      render : (_, record) => <Button type="link" onClick={()=>{deleteHistory(record.id)}}><DeleteOutlined /></Button>
+      render : (_, record) => <Button type="text" onClick={()=>{deleteHistory(record.id)}}><DeleteOutlined /></Button>
     },
   ];
 

@@ -4,6 +4,8 @@ import { Button } from 'antd';
 import Searchbar from "../Components/Searchbar";
 import VideoCard from "../Components/VideoCard";
 import Modalbox from '../Components/Modalbox';
+import BucketEdit from "./BucketEdit";
+import { DeleteOutlined } from '@ant-design/icons';
 
 const Bucket = (props) => {
   const[elementsToDelete, setElementsToDelete] = useState([])
@@ -72,7 +74,8 @@ const Bucket = (props) => {
   <div className="bucket-outer">
     <div className="bucket-header">
       <p>{props.title}</p>
-     
+     <BucketEdit/>
+     <Button type="text" size="large" onClick={console.log("Bucket Deleted")}><DeleteOutlined/></Button>
       <Searchbar setSearch={setSearch} onSearchClear={onSearchClear}/>
    </div>
     <div className="bucket-body">
