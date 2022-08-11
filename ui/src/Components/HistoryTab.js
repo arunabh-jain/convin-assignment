@@ -73,12 +73,6 @@ const Tableview = (props) => {
       width: "30vw",
     },
     {
-      title: 'BUCKET NAME',
-      dataIndex: 'bucket_title',
-      key: 'bucket_title',
-      width: "10vw",
-    },
-    {
       title: 'VIDEO LINK',
       dataIndex: 'video_link',
       key: 'video_link',

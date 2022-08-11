@@ -23,8 +23,9 @@ return (
     <Button size="middle" className="open-video" type="primary" onClick={showModal}>PLAY
     </Button>
     <Modal
+    destroyOnClose
     className='video-modal'
-    title="Video Frame"
+    title="MEDIA PLAYER"
     visible={isModalVisible}
     onCancel={handleCancel}
     
@@ -33,8 +34,7 @@ return (
       ]}>
           
       <div className='videoplayer-div'>
-      <iframe classname="videoplayer" src={props.link}
-      title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope"
+      <iframe classname="videoplayer" src={props.link} frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope"
       allowfullscreen></iframe>
       </div>
 
