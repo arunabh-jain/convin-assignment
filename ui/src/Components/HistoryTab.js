@@ -3,15 +3,27 @@ import { Button,Table} from 'antd';
 import { DeleteOutlined } from '@ant-design/icons';
 import React from 'react';
 import { useState, useEffect } from 'react';
+import VideoFrame from './VideoFrame';
 
 const Tableview = (props) => {
   const[history,setHistory] = useState([])
+
+  function GetSortOrder() {    
+    return function(a, b) {   
+        if (a.id > b.id) {    
+            return -1;    
+        } else if (a.id < b.id) {    
+            return 1;    
+        }    
+        return 0;    
+    }    
+  }
 
   useEffect(() => {
     const fetchHistory = async () => {
       const response = await fetch("http://localhost:8000/history",{method: "GET"});
       const data = await response.json();
-      setHistory(data);
+      setHistory(data.sort(GetSortOrder()));
     }
     fetchHistory()
   }, [props.active])
@@ -29,6 +41,30 @@ const Tableview = (props) => {
     setHistory(response);
   }
 
+  const playVideo = async (bucketID,bucketName,id,name,link) => {
+    let date = new Date();
+        let data = {
+            "bucket_id": bucketID,
+            "bucket_title": bucketName,
+            "video_id": id,
+            "video_name": name,
+            "video_link":link,
+            "last_played": date.toLocaleTimeString()+" "+date.toLocaleDateString() 
+        }
+        console.log(data);
+        await fetch(`http://localhost:8000/history/`, {
+            method: 'POST', mode: 'cors',credentials: 'same-origin',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            referrerPolicy: 'no-referrer',
+            body: JSON.stringify(data)
+        });
+        const response = await fetch("http://localhost:8000/history",{method: "GET"});
+        data = await response.json();
+        setHistory(data.sort(GetSortOrder()));
+  }
+
   const columns = [
     {
       title: 'VIDEO NAME',
@@ -44,6 +80,12 @@ const Tableview = (props) => {
       title: 'VIDEO LINK',
       dataIndex: 'video_link',
       key: 'video_link',
+    },
+    {
+      title: 'PLAY VIDEO',
+      dataIndex: 'video_link',
+      key: 'video_link_play',
+      render : (_, record) => <VideoFrame from="history" link = {record.video_link} onClick={playVideo} record={record}/>
     },
     {
       title: 'PLAY TIME',
