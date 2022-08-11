@@ -23,6 +23,7 @@ return (
     <Button size="middle" className="open-video" type="primary" onClick={showModal}>PLAY
     </Button>
     <Modal
+    className='video-modal'
     title="Video Frame"
     visible={isModalVisible}
     onCancel={handleCancel}

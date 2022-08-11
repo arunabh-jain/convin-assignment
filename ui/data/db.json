@@ -5,13 +5,8 @@
       "videos": [
         {
           "video_id": 0,
-          "video_name": "adcsccasc",
-          "video_link": "asfas"
-        },
-        {
-          "video_id": 1,
-          "video_name": "google",
-          "video_link": "google.com"
+          "video_name": "hulk",
+          "video_link": "https://www.youtube.com/embed/pwsh4FjLavU"
         }
       ],
       "id": 1
@@ -39,20 +34,7 @@
       "video_id": 0,
       "video_name": "adcsccasc",
       "video_link": "asfas",
-      "last_played": "11:39:02 AM 8/11/2022",
-      "id": 1
-    },
-    {
-      "bucket_id": 1,
-      "bucket_title": "My Bucket",
-      "video_id": 0,
-      "video_name": "adcsccasc",
-      "video_link": "asfas",
-<<<<<<< HEAD
       "last_played": "11:52:18 AM 8/11/2022",
-=======
-      "last_played": "11:47:29 AM 8/11/2022",
->>>>>>> 9c86b8aecd02fcd489006291a0574930125dd445
       "id": 2
     },
     {
@@ -61,11 +43,7 @@
       "video_id": 0,
       "video_name": "adcsccasc",
       "video_link": "asfas",
-<<<<<<< HEAD
       "last_played": "11:52:21 AM 8/11/2022",
-=======
-      "last_played": "11:48:55 AM 8/11/2022",
->>>>>>> 9c86b8aecd02fcd489006291a0574930125dd445
       "id": 3
     },
     {
@@ -74,7 +52,6 @@
       "video_id": 0,
       "video_name": "adcsccasc",
       "video_link": "asfas",
-<<<<<<< HEAD
       "last_played": "11:52:25 AM 8/11/2022",
       "id": 4
     },
@@ -266,10 +243,42 @@
       "video_link": "asfas",
       "last_played": "12:15:38 PM 8/11/2022",
       "id": 25
-=======
-      "last_played": "11:48:58 AM 8/11/2022",
-      "id": 4
->>>>>>> 9c86b8aecd02fcd489006291a0574930125dd445
+    },
+    {
+      "bucket_id": 1,
+      "bucket_title": "My Bucket",
+      "video_id": 0,
+      "video_name": "adcsccasc",
+      "video_link": "asfas",
+      "last_played": "12:23:54 PM 8/11/2022",
+      "id": 26
+    },
+    {
+      "bucket_id": 1,
+      "bucket_title": "My Bucket",
+      "video_id": 0,
+      "video_name": "adcsccasc",
+      "video_link": "asfas",
+      "last_played": "12:25:16 PM 8/11/2022",
+      "id": 27
+    },
+    {
+      "bucket_id": 2,
+      "bucket_title": "Games",
+      "video_id": 0,
+      "video_name": "gyan",
+      "video_link": "https://youtu.be/BcZ-EwTl7KU",
+      "last_played": "12:26:20 PM 8/11/2022",
+      "id": 28
+    },
+    {
+      "bucket_id": 2,
+      "bucket_title": "Games",
+      "video_id": 0,
+      "video_name": "gyan",
+      "video_link": "https://youtube.com/BcZ-EwTl7KU",
+      "last_played": "12:27:04 PM 8/11/2022",
+      "id": 29
     }
   ]
 }

@@ -17,11 +17,11 @@
     min-width:min-content !important;
 }
 
-.ant-modal-body{
+.video-modal .ant-modal-body{
     min-height:500px;
 }
 
-.ant-modal-footer{
+.video-modal .ant-modal-footer{
     height: 0;
 
 }
@@ -33,7 +33,7 @@
     margin: 0;
 }
 
-.ant-modal{
+.video-modal{
     left: -12%;
     top: 10%;
 }
