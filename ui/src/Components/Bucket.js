@@ -51,26 +51,26 @@ const Bucket = (props) => {
   }
 
   const deleteBucket = async () => {
-    await fetch(`http://localhost:8000/buckets/${props.id}`, {
+    await fetch(`/buckets/${props.id}`, {
         method: 'DELETE', mode: 'cors',credentials: 'same-origin',
         headers: {
             'Content-Type': 'application/json'
         },
         referrerPolicy: 'no-referrer'
     });
-    let response = await fetch("http://localhost:8000/buckets",{method: "GET"});
+    let response = await fetch("/buckets",{method: "GET"});
     response = await response.json();
     props.setData(response);
   }
 
   const deleteElements = async() => {
-    let response = await fetch(`http://localhost:8000/buckets/${props.id}`,{method: "GET"});
+    let response = await fetch(`/buckets/${props.id}`,{method: "GET"});
     let data = await response.json();
     data.videos = data.videos.filter((value)=>{
       return !elementsToDelete.includes(value.video_id)
     })
     setElementsToDelete([]);
-    await fetch(`http://localhost:8000/buckets/${props.id}`, {
+    await fetch(`/buckets/${props.id}`, {
         method: 'PUT', mode: 'cors',credentials: 'same-origin',
         headers: {
             'Content-Type': 'application/json'
@@ -78,7 +78,7 @@ const Bucket = (props) => {
         referrerPolicy: 'no-referrer',
         body: JSON.stringify(data)
     });
-    response = await fetch("http://localhost:8000/buckets",{method: "GET"});
+    response = await fetch("/buckets",{method: "GET"});
     response = await response.json();
     props.setData(response);
   }

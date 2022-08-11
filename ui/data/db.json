@@ -1,4 +1,10 @@
 {
-  "buckets": [],
+  "buckets": [
+    {
+      "id": "1",
+      "bucket_title": "Bucket 1",
+      "videos": []
+    }
+  ],
   "history": []
 }
