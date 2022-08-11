@@ -26,6 +26,7 @@ const Popup = (props) => {
     let response = await fetch("http://localhost:8000/buckets",{method: "GET"});
     response = await response.json();
     props.setData(response);
+    setName('')
     setIsModalVisible(false);
   };
 
@@ -38,7 +39,7 @@ const Popup = (props) => {
       <Button size="middle" className="open-bucket-btn" type="primary" onClick={showModal}>ADD BUCKET
       </Button>
       <Modal
-      title="ADD/EDIT BUCKET"
+      title="ADD BUCKET"
       visible={isModalVisible}
       onCancel={handleCancel}
       

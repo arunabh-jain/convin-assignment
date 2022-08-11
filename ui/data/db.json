@@ -1,68 +1,31 @@
 {
   "buckets": [
     {
-      "bucket_title": "My Bucket",
+      "bucket_title": "Akshat",
       "videos": [
         {
           "video_id": 0,
-          "video_name": "adcsccasc",
-          "video_link": "asfas"
+          "video_name": "Akshat",
+          "video_link": "https://www.youtube.com/embed/fBRzD6dwJfw"
         }
       ],
       "id": 1
     },
     {
-      "bucket_title": "Games",
+      "bucket_title": "Bucket 2",
       "videos": [],
       "id": 2
-    },
-    {
-      "bucket_title": "Educational",
-      "videos": [],
-      "id": 3
-    },
-    {
-      "bucket_title": "Educational",
-      "videos": [],
-      "id": 4
     }
   ],
   "history": [
     {
       "bucket_id": 1,
-      "bucket_title": "My Bucket",
+      "bucket_title": "Akshat",
       "video_id": 0,
-      "video_name": "adcsccasc",
-      "video_link": "asfas",
-      "last_played": "11:39:02 AM 8/11/2022",
+      "video_name": "Akshat",
+      "video_link": "https://www.youtube.com/embed/fBRzD6dwJfw",
+      "last_played": "12:38:34 PM 8/11/2022",
       "id": 1
-    },
-    {
-      "bucket_id": 1,
-      "bucket_title": "My Bucket",
-      "video_id": 0,
-      "video_name": "adcsccasc",
-      "video_link": "asfas",
-      "last_played": "11:47:29 AM 8/11/2022",
-      "id": 2
-    },
-    {
-      "bucket_id": 1,
-      "bucket_title": "My Bucket",
-      "video_id": 0,
-      "video_name": "adcsccasc",
-      "video_link": "asfas",
-      "last_played": "11:48:55 AM 8/11/2022",
-      "id": 3
-    },
-    {
-      "bucket_id": 1,
-      "bucket_title": "My Bucket",
-      "video_id": 0,
-      "video_name": "adcsccasc",
-      "video_link": "asfas",
-      "last_played": "11:48:58 AM 8/11/2022",
-      "id": 4
     }
   ]
 }
